@@ -1,0 +1,22 @@
+﻿@model VM_Create_Product
+
+<div class="container-md border border border-danger rounded-1 p-2 m-4 w-100 mh-100" style="height: 35rem;">
+   <div class="container w-75">
+        <div asp-validation-summary="All"></div>
+    <form asp-action="Index" asp-controller="Home" method="post">
+        <div class="form-group m-2">
+            <label for="exampleInputName">Product Name</label>
+                <input type="text" class="form-control" asp-for="name" id="exampleInputName" placeholder="Enter Product Name">
+                <span class="text-danger" asp-validation-for="name"></span>
+        </div>
+        <div class="form-group m-2">
+                <label for="exampleInputDescription">Prouduct Description</label>
+                <textarea class="form-control" asp-for="description" id="exampleInputDescription" placeholder="Enter Product Description"> </textarea>
+                <span class="text-danger border-bottom border-danger" asp-validation-for="description"></span>
+        </div>
+        <button type="submit" class="btn btn-primary m-4">Submit</button>
+    </form>
+   </div>
+ </div>
+
+

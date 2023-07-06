@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{5057F1B0-7470-41C5-B114-FA0AE033AE76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWYLisans.Domain", "Core\TWYLisans.Domain\TWYLisans.Domain.csproj", "{DC35D827-3DC7-4454-9474-6F3587779DCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWYLisans.Application", "Core\TWYLisans.Application\TWYLisans.Application.csproj", "{F250F567-EF84-448D-8C23-B1A14C98CBAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F7952076-B7D1-4BFC-9152-41ECE05D3D63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWYLisans.Infrastructure", "Infrastructure\TWYLisans.Infrastructure\TWYLisans.Infrastructure.csproj", "{F91B19A2-3606-44D7-B884-5984A058BA29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWYLisans.Persistence", "Infrastructure\TWYLisans.Persistence\TWYLisans.Persistence.csproj", "{D8A75F6A-B3B0-4BD3-952F-B10C282C3C47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{898982DF-398D-4438-841B-6534799C6BBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWYLisans.WebUI", "Presentation\TWYLisans.WebUI\TWYLisans.WebUI.csproj", "{EC70C848-5E65-41A0-A3E3-28A498DF005B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC35D827-3DC7-4454-9474-6F3587779DCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC35D827-3DC7-4454-9474-6F3587779DCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC35D827-3DC7-4454-9474-6F3587779DCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC35D827-3DC7-4454-9474-6F3587779DCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F250F567-EF84-448D-8C23-B1A14C98CBAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F250F567-EF84-448D-8C23-B1A14C98CBAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F250F567-EF84-448D-8C23-B1A14C98CBAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F250F567-EF84-448D-8C23-B1A14C98CBAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F91B19A2-3606-44D7-B884-5984A058BA29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91B19A2-3606-44D7-B884-5984A058BA29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91B19A2-3606-44D7-B884-5984A058BA29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91B19A2-3606-44D7-B884-5984A058BA29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8A75F6A-B3B0-4BD3-952F-B10C282C3C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8A75F6A-B3B0-4BD3-952F-B10C282C3C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8A75F6A-B3B0-4BD3-952F-B10C282C3C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8A75F6A-B3B0-4BD3-952F-B10C282C3C47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC70C848-5E65-41A0-A3E3-28A498DF005B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC70C848-5E65-41A0-A3E3-28A498DF005B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC70C848-5E65-41A0-A3E3-28A498DF005B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC70C848-5E65-41A0-A3E3-28A498DF005B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DC35D827-3DC7-4454-9474-6F3587779DCF} = {5057F1B0-7470-41C5-B114-FA0AE033AE76}
+		{F250F567-EF84-448D-8C23-B1A14C98CBAB} = {5057F1B0-7470-41C5-B114-FA0AE033AE76}
+		{F91B19A2-3606-44D7-B884-5984A058BA29} = {F7952076-B7D1-4BFC-9152-41ECE05D3D63}
+		{D8A75F6A-B3B0-4BD3-952F-B10C282C3C47} = {F7952076-B7D1-4BFC-9152-41ECE05D3D63}
+		{EC70C848-5E65-41A0-A3E3-28A498DF005B} = {898982DF-398D-4438-841B-6534799C6BBF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82ED4D04-060D-4A30-9833-B7B4D3A8BDE6}
+	EndGlobalSection
+EndGlobal

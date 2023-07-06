@@ -1,0 +1,391 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\redli\\source\\repos\\TWYLisans\\Presentation\\TWYLisans.WebUI\\TWYLisans.WebUI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Application\\TWYLisans.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Application\\TWYLisans.Application.csproj",
+        "projectName": "TWYLisans.Application",
+        "projectPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Application\\TWYLisans.Application.csproj",
+        "packagesPath": "C:\\Users\\redli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\redli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Domain\\TWYLisans.Domain.csproj": {
+                "projectPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Domain\\TWYLisans.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.6.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.6.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Domain\\TWYLisans.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Domain\\TWYLisans.Domain.csproj",
+        "projectName": "TWYLisans.Domain",
+        "projectPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Domain\\TWYLisans.Domain.csproj",
+        "packagesPath": "C:\\Users\\redli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\redli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\redli\\source\\repos\\TWYLisans\\Infrastructure\\TWYLisans.Infrastructure\\TWYLisans.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Infrastructure\\TWYLisans.Infrastructure\\TWYLisans.Infrastructure.csproj",
+        "projectName": "TWYLisans.Infrastructure",
+        "projectPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Infrastructure\\TWYLisans.Infrastructure\\TWYLisans.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\redli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Infrastructure\\TWYLisans.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\redli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Application\\TWYLisans.Application.csproj": {
+                "projectPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Application\\TWYLisans.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\redli\\source\\repos\\TWYLisans\\Infrastructure\\TWYLisans.Persistence\\TWYLisans.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Infrastructure\\TWYLisans.Persistence\\TWYLisans.Persistence.csproj",
+        "projectName": "TWYLisans.Persistence",
+        "projectPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Infrastructure\\TWYLisans.Persistence\\TWYLisans.Persistence.csproj",
+        "packagesPath": "C:\\Users\\redli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Infrastructure\\TWYLisans.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\redli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Application\\TWYLisans.Application.csproj": {
+                "projectPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Application\\TWYLisans.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\redli\\source\\repos\\TWYLisans\\Presentation\\TWYLisans.WebUI\\TWYLisans.WebUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Presentation\\TWYLisans.WebUI\\TWYLisans.WebUI.csproj",
+        "projectName": "TWYLisans.WebUI",
+        "projectPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Presentation\\TWYLisans.WebUI\\TWYLisans.WebUI.csproj",
+        "packagesPath": "C:\\Users\\redli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Presentation\\TWYLisans.WebUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\redli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Application\\TWYLisans.Application.csproj": {
+                "projectPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Core\\TWYLisans.Application\\TWYLisans.Application.csproj"
+              },
+              "C:\\Users\\redli\\source\\repos\\TWYLisans\\Infrastructure\\TWYLisans.Infrastructure\\TWYLisans.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Infrastructure\\TWYLisans.Infrastructure\\TWYLisans.Infrastructure.csproj"
+              },
+              "C:\\Users\\redli\\source\\repos\\TWYLisans\\Infrastructure\\TWYLisans.Persistence\\TWYLisans.Persistence.csproj": {
+                "projectPath": "C:\\Users\\redli\\source\\repos\\TWYLisans\\Infrastructure\\TWYLisans.Persistence\\TWYLisans.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

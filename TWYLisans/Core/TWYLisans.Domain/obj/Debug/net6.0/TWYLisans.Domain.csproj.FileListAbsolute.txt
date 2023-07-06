@@ -1,0 +1,12 @@
+C:\Users\redli\source\repos\TWYLisans\Core\TWYLisans.Domain\bin\Debug\net6.0\TWYLisans.Domain.deps.json
+C:\Users\redli\source\repos\TWYLisans\Core\TWYLisans.Domain\bin\Debug\net6.0\TWYLisans.Domain.dll
+C:\Users\redli\source\repos\TWYLisans\Core\TWYLisans.Domain\bin\Debug\net6.0\TWYLisans.Domain.pdb
+C:\Users\redli\source\repos\TWYLisans\Core\TWYLisans.Domain\obj\Debug\net6.0\TWYLisans.Domain.csproj.AssemblyReference.cache
+C:\Users\redli\source\repos\TWYLisans\Core\TWYLisans.Domain\obj\Debug\net6.0\TWYLisans.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\redli\source\repos\TWYLisans\Core\TWYLisans.Domain\obj\Debug\net6.0\TWYLisans.Domain.AssemblyInfoInputs.cache
+C:\Users\redli\source\repos\TWYLisans\Core\TWYLisans.Domain\obj\Debug\net6.0\TWYLisans.Domain.AssemblyInfo.cs
+C:\Users\redli\source\repos\TWYLisans\Core\TWYLisans.Domain\obj\Debug\net6.0\TWYLisans.Domain.csproj.CoreCompileInputs.cache
+C:\Users\redli\source\repos\TWYLisans\Core\TWYLisans.Domain\obj\Debug\net6.0\TWYLisans.Domain.dll
+C:\Users\redli\source\repos\TWYLisans\Core\TWYLisans.Domain\obj\Debug\net6.0\refint\TWYLisans.Domain.dll
+C:\Users\redli\source\repos\TWYLisans\Core\TWYLisans.Domain\obj\Debug\net6.0\TWYLisans.Domain.pdb
+C:\Users\redli\source\repos\TWYLisans\Core\TWYLisans.Domain\obj\Debug\net6.0\ref\TWYLisans.Domain.dll
