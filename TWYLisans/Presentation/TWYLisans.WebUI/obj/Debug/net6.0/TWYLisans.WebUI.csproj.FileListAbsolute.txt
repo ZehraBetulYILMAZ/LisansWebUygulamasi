@@ -116,3 +116,4 @@ C:\Users\redli\source\repos\TWYLisans\Presentation\TWYLisans.WebUI\obj\Debug\net
 C:\Users\redli\source\repos\TWYLisans\Presentation\TWYLisans.WebUI\bin\Debug\net6.0\TWYLisans.Infrastructure.dll
 C:\Users\redli\source\repos\TWYLisans\Presentation\TWYLisans.WebUI\bin\Debug\net6.0\TWYLisans.Infrastructure.pdb
 C:\Users\redli\source\repos\TWYLisans\Presentation\TWYLisans.WebUI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\redli\source\repos\TWYLisans\Presentation\TWYLisans.WebUI\bin\Debug\net6.0\FakeData.dll

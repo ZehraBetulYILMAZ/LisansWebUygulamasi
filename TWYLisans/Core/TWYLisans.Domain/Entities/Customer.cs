@@ -16,6 +16,6 @@ namespace TWYLisans.Domain.Entities
         public string phoneNumber { get; set; }
         public string ePosta { get; set; }
         public bool gender { get; set; }
-        public ICollection<Product> products { get; set; }
+        public ICollection<Product> ?products { get; set; }
     }
 }

@@ -11,6 +11,6 @@ namespace TWYLisans.Domain.Entities
     {
         public Guid licenceKey { get; set; }
         public DateTime expiryDate { get; set; }
-        public Product product { get; set; }
+        public Product ?product { get; set; }
     }
 }

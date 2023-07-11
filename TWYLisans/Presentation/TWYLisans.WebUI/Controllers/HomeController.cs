@@ -19,35 +19,40 @@ namespace TWYLisans.WebUI.Controllers
             _productReadRepository = productReadRepository; 
             _productWriteRepository = productWriteRepository;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+              var   das= _productReadRepository.GetAll();
+            var c = das.FirstOrDefault();
+            var b = await _productReadRepository.GetSingleAsync(c => c.name == "a",false);
+           
             return View();
         }
-        [HttpPost]
-        public async Task<IActionResult> Index(VM_Create_Product model)
-        {
-            Product product = TypeConversion.Conversion<VM_Create_Product,Product>(model);
-            product.createdDate = DateTime.Now;
-            bool isAdded = await _productWriteRepository.AddAsync(product);
-           await  _productWriteRepository.SaveAsync();
-            if(!isAdded)
-            {
-                var message = new AlertMessage()
-                {
-                    message = $"{model.name} ürününz eklenemedi",
-                    alertType = "danger"
+        //[HttpPost]
+        //public async Task<IActionResult> Index(VM_Create_Product model)
+        //{
+        //   // Product product = TypeConversion.Conversion<VM_Create_Product,Product>(model);
+        //   // product.createdDate = DateTime.Now;
+        //   // bool isAdded = await _productWriteRepository.AddAsync(product);
+        //   //await  _productWriteRepository.SaveAsync();
+        //    //if(!isAdded)
+        //    //{
+        //        var message = new AlertMessage()
+        //        {
+        //            message = $"{model.name} ürününz eklenemedi",
+        //            alertType = "danger"
 
-                };
-                TempData["message"] = JsonConvert.SerializeObject(message);
-                return View();
-            }
-            if (!ModelState.IsValid)
-            {
-                var msg = ModelState.ToList();             
-            }
+        //        };
+        //        TempData["message"] = JsonConvert.SerializeObject(message);
+                
+            
+        //    if (!ModelState.IsValid)
+        //    {
+        //        var msg = ModelState.ToList();             
+        //    }
           
-            return View();
-        }
-
+        //    return View();
+        //}
+       
+     
     }
 }

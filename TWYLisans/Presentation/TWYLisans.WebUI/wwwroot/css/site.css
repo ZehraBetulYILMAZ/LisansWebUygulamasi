@@ -1,1 +1,45 @@
+.list-items>div {
+    margin-left : 15px;
+   
+}
+.firstDIV {
+    margin-top: 150px;
+    
+}
 
+.active {
+    background-color: #889293 !important;
+}
+.MyContainer {
+    border-color: #CCD6D8 !important;
+}
+
+.DivWithScroll {
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.MyBtn {
+    background-color: #E3E8EB !important;
+    color: #ffffff;
+    font-size: 24px;
+}
+.BtnSil {
+    background-color: #E3E8EB !important;
+    color: #ffffff;
+    font-size: 16px;
+}
+.BtnDuzenle {
+    background-color: #474745 !important;
+    color: #ffffff;
+    font-size: 16px;
+}
+ .myP {
+    text-align: start;
+    color: #889293;
+    margin:5px;
+}
+   .myA {
+       color: #474745 !important;
+       font-size: 20px;
+    }

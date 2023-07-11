@@ -102,7 +102,7 @@ namespace TWYLisans.Persistence.Migrations
                     b.Property<Guid>("licenceKey")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("productID")
+                    b.Property<int?>("productID")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
@@ -120,13 +120,13 @@ namespace TWYLisans.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<int>("categoryID")
+                    b.Property<int?>("categoryID")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("createdDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("customerID")
+                    b.Property<int?>("customerID")
                         .HasColumnType("int");
 
                     b.Property<string>("description")
@@ -150,9 +150,7 @@ namespace TWYLisans.Persistence.Migrations
                 {
                     b.HasOne("TWYLisans.Domain.Entities.Product", "product")
                         .WithMany("licences")
-                        .HasForeignKey("productID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("productID");
 
                     b.Navigation("product");
                 });
@@ -161,15 +159,11 @@ namespace TWYLisans.Persistence.Migrations
                 {
                     b.HasOne("TWYLisans.Domain.Entities.Category", "category")
                         .WithMany("products")
-                        .HasForeignKey("categoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("categoryID");
 
                     b.HasOne("TWYLisans.Domain.Entities.Customer", "customer")
                         .WithMany("products")
-                        .HasForeignKey("customerID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("customerID");
 
                     b.Navigation("category");
 

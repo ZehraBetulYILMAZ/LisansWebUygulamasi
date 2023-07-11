@@ -11,6 +11,6 @@ namespace TWYLisans.Domain.Entities
     public class Category:BaseEntity
     {
         public string name { get; set; }
-        public ICollection<Product>products{ get; set; }
+        public ICollection<Product> ?products{ get; set; }
     }
 }

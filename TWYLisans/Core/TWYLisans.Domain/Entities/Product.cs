@@ -11,8 +11,8 @@ namespace TWYLisans.Domain.Entities
     {
         public string name { get; set; }
         public string description { get; set; }
-        public Category category { get; set; }
-        public Customer customer { get; set; }
-        public ICollection<Licence> licences { get; set; }
+        public Category ?category { get; set; }
+        public Customer ?customer { get; set; }
+        public ICollection<Licence> ?licences { get; set; }
     }
 }

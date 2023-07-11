@@ -19,6 +19,8 @@ namespace TWYLisans.Persistence
             service.AddDbContext<TWYLisansDbContext>(options => options.UseSqlServer(Configuration.ConnectionString,null));
             service.AddScoped<IProductWriteRepository, ProductWriteRepository>();
             service.AddScoped<IProductReadRepository, ProductReadRepository>();
+            service.AddScoped<IWriteCustomerRepository, CustomerWriteRepository>();
+            service.AddScoped<IReadCustomerRepository, CustomerReadRepository>();
 
         }
     }

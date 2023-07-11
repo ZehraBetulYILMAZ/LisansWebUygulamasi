@@ -1,0 +1,78 @@
+﻿@* <--!asp-route-id="1"-->*@
+
+
+@model VM_Create_Product
+
+<div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+        <main role="main" class="pb-3">
+
+            <div class="container-md border border  rounded-1 p-2 m-4 w-100 mh-100 MyContainer" style="height: 35rem;">
+                <div class="container  DivWithScroll">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Ürün Adı</th>
+                                <th scope="col">Lisans</th>
+                                <th scope="col">Müşteri</th>
+                                <th scope="col">Aksiyon</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A</td>
+                                <td>A</td>
+                                <td>A</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnDuzenle btn-sm">Düzenle</a>
+                                        <a asp-controller="Customer" asp-action="DeleteCustomer" class="btn BtnSil btn-sm">Sil</a>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>A</td>
+                                <td>A</td>
+                                <td>A</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnDuzenle btn-sm">Düzenle</a>
+                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnSil btn-sm">Sil</a>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>A</td>
+                                <td>A</td>
+                                <td>A</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnDuzenle btn-sm">Düzenle</a>
+                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnSil btn-sm">Sil</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A</td>
+                                <td>A</td>
+                                <td>A</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                        <a asp-controller="Product" asp-action="ProductDetails" class="btn BtnDuzenle btn-sm">Düzenle</a>
+                                        <a asp-controller="Product" asp-action="ProductDetails" class="btn BtnSil btn-sm">Sil</a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="col-md-2"></div>
+</div>
