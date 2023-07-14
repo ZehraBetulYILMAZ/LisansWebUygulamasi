@@ -1,8 +1,4 @@
-﻿@* <--!asp-route-id="1"-->*@
-
-
-@model VM_Create_Product
-
+﻿@model List<VM_List_Product>
 <div class="row">
     <div class="col-md-2">
        
@@ -22,53 +18,30 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>
-                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnDuzenle btn-sm">Düzenle</a>
-                                        <a asp-controller="Customer" asp-action="DeleteCustomer" class="btn BtnSil btn-sm">Sil</a>
-                                    </div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>
-                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnDuzenle btn-sm">Düzenle</a>
-                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnSil btn-sm">Sil</a>
-                                    </div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>
-                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnDuzenle btn-sm">Düzenle</a>
-                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnSil btn-sm">Sil</a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>
-                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <a asp-controller="Product" asp-action="ProductDetails" class="btn BtnDuzenle btn-sm">Düzenle</a>                      
-                                        <a asp-controller="Product" asp-action="ProductDetails" class="btn BtnSil btn-sm">Sil</a>
-                                    </div>
-                                </td>
-                            </tr>
-
+                            @if (Model != null)
+                            {
+                                foreach (var product in @Model)
+                                {
+                                    <tr>
+                                        <td>@product.name</td>
+                                        @if (product.licence != null)
+                                        {
+                                            <td>@product.licence.licenceKey</td>
+                                        }
+                                        else
+                                        {
+                                            <td>00000000-0000-0000-0000-000000000000</td>
+                                        }
+                                        <td>@product.customer.firstName @product.customer.lastName</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                <a asp-controller="Product" asp-action="ProductDetails" asp-route-id="@product.ID" class="btn BtnDuzenle btn-sm">Düzenle</a>                      
+                                                <a asp-controller="Product" asp-action="ProductDetails" class="btn BtnSil btn-sm">Sil</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            }
                         </tbody>
                     </table>
                 </div>

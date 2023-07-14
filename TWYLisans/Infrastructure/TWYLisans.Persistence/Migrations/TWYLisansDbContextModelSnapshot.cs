@@ -102,7 +102,7 @@ namespace TWYLisans.Persistence.Migrations
                     b.Property<Guid>("licenceKey")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("productID")
+                    b.Property<int>("productID")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
@@ -126,7 +126,7 @@ namespace TWYLisans.Persistence.Migrations
                     b.Property<DateTime>("createdDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("customerID")
+                    b.Property<int>("customerID")
                         .HasColumnType("int");
 
                     b.Property<string>("description")
@@ -150,7 +150,9 @@ namespace TWYLisans.Persistence.Migrations
                 {
                     b.HasOne("TWYLisans.Domain.Entities.Product", "product")
                         .WithMany("licences")
-                        .HasForeignKey("productID");
+                        .HasForeignKey("productID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("product");
                 });
@@ -163,7 +165,9 @@ namespace TWYLisans.Persistence.Migrations
 
                     b.HasOne("TWYLisans.Domain.Entities.Customer", "customer")
                         .WithMany("products")
-                        .HasForeignKey("customerID");
+                        .HasForeignKey("customerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("category");
 

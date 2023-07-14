@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TWYLisans.Application.ViewModels.Customer
+namespace TWYLisans.Application.ViewModels.Customers
 {
     public class VM_Create_Customer
     {

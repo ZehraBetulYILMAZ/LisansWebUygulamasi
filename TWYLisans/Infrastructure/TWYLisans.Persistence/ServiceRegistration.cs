@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using TWYLisans.Application.Repositories;
 using TWYLisans.Persistence.Context;
 using TWYLisans.Persistence.Repositories;
+using TWYLisans.Persistence.Repositories.Licences;
 
 namespace TWYLisans.Persistence
 {
@@ -21,7 +22,8 @@ namespace TWYLisans.Persistence
             service.AddScoped<IProductReadRepository, ProductReadRepository>();
             service.AddScoped<IWriteCustomerRepository, CustomerWriteRepository>();
             service.AddScoped<IReadCustomerRepository, CustomerReadRepository>();
-
+            service.AddScoped<ILicenceWriteRepository, LicenceWriteRepository>();
+            service.AddScoped<ILicenceReadRepository, LicenceReadRepository>();
         }
     }
 }

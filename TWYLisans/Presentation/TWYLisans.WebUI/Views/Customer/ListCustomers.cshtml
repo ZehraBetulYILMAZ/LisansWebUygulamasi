@@ -2,11 +2,10 @@
 
 
 
-
 @* <--!asp-route-id="1"-->*@
 
 
-@model VM_Create_Product
+@model List< VM_List_Customer>
 
 <div class="row">
     <div class="col-md-2">
@@ -29,61 +28,26 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>
-                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnDuzenle btn-sm">Düzenle</a>
-                                        <a asp-controller="Customer" asp-action="DeleteCustomer" class="btn BtnSil btn-sm">Sil</a>
-                                    </div>
-                                </td>
+                            @if (Model != null)
+                            {
+                                @foreach (var customer in Model)
+                                {
+                                    <tr>
+                                        <td>@customer.firstName @customer.lastName</td>
+                                        <td>@customer.ePosta</td>
+                                        <td>@customer.phoneNumber</td>
+                                        <td>@customer.city</td>
+                                        <td>@customer.town</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                <a asp-controller="Customer" asp-action="DetailCustomer" asp-route-id="@customer.ID" class="btn BtnDuzenle btn-sm">Detay</a>
+                                                <a asp-controller="Customer" asp-route-id="@customer.ID" asp-action="DeleteCustomer" class="btn BtnSil btn-sm">Sil</a>
+                                            </div>
+                                        </td>
 
-                            </tr>
-                            <tr>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>
-                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnDuzenle btn-sm">Düzenle</a>
-                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnSil btn-sm">Sil</a>
-                                    </div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>
-                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnDuzenle btn-sm">Düzenle</a>
-                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnSil btn-sm">Sil</a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>A</td>
-                                <td>
-                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnDuzenle btn-sm">Düzenle</a>
-                                        <a asp-controller="Customer" asp-action="DetailCustomer" class="btn BtnSil btn-sm">Sil</a>
-                                    </div>
-                                </td>
-                            </tr>
-
+                                    </tr>
+                                }
+                            }
                         </tbody>
                     </table>
                 </div>

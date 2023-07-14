@@ -1,5 +1,5 @@
 using FluentValidation.AspNetCore;
-using TWYLisans.Application.Validators.Customer;
+using TWYLisans.Application.Validators.Customers;
 using TWYLisans.Application.Validators.Products;
 using TWYLisans.Persistence;
 var builder = WebApplication.CreateBuilder(args);

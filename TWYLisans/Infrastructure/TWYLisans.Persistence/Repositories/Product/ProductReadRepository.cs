@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,8 +12,11 @@ namespace TWYLisans.Persistence.Repositories
 {
     public class ProductReadRepository : ReadRepository<Product>, IProductReadRepository
     {
+  
         public ProductReadRepository(TWYLisansDbContext context) : base(context)
         {
+        
         }
+
     }
 }
