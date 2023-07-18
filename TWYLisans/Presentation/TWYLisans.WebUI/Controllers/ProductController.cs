@@ -147,21 +147,18 @@ namespace TWYLisans.WebUI.Controllers
             }  
             return View(model);
         }
-        public IActionResult ProductUpdate()
+        public IActionResult ProductUpdate(VM_List_Product model)
         {
-            return RedirectToAction("ProductDetails");
+           
+            //Product product = TypeConversion.Conversion<VM_List_Product,Product>(model);
+            Licence licence = TypeConversion.Conversion<VM_List_Licence, Licence>(model.licence);
+            return RedirectToAction("ListProduct");
         }
         public IActionResult ProductDelete()
         {
             return RedirectToAction("ProductDetails");
         }
-        public IActionResult LicenceDetails()
-        {
-            return View();
-        }
-        public IActionResult CreateLicence()
-        {
-            return View();
-        }
+      
+ 
     }
 }

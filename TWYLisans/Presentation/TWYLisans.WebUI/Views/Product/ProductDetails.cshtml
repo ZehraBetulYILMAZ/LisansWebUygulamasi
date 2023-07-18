@@ -5,12 +5,12 @@
     </div>
     <div class="col-md-8 ">
     <main role="main" class="pb-3">
-        <div class="container border rounded-1 p-2 m-3 w-100 mh-100 MyContainer" style="height: 35rem;">
-            <div class="row " style="margin-top:40px;">
+        <div class="container border rounded-1   w-100 mh-100 MyContainer" style="height: 36rem; margin-top:20px;">
+            <div class="row ">
                 @if (Model != null)
                 {
-                    <form class="d-flex justify-content-center">
-                        <div class="row w-75 ">
+                    <form class="d-flex justify-content-center" asp-controller="Product" asp-action="ProductUpdate" method="post">
+                        <div class="row w-100 ">
                             <!--satır başlangıcı -->
                             <p class="myP">Ürün Adı:</p>
                             <div class="col-5">
@@ -39,14 +39,14 @@
                             <div class="col-5">
                                 <h6>@Model.description</h6>
                             </div>
-                            <div class="col-4">
+                            <div class="col-6">
                                 <div class="row text-start">
                                     <div class="col-md-2">
                                         <a data-toggle="collapse" class="myA" href="#collapse1">
                                             <i class="indicator fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-9">
                                         <div id="collapse1" class="panel-collapse collapse in">
                                             <span class="text">
                                                 <label>
@@ -184,6 +184,8 @@
                                     </div>
                                    
                                 }
+                                <input type="hidden" asp-for="@Model.customer.ID">
+                                <input type="hidden" asp-for="@Model.licence">
                             <button type="submit" class="btn btn-dark m-2 w-100">Güncelle</button>
 
                         </div>
