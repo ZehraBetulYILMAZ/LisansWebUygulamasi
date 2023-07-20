@@ -9,16 +9,10 @@
             <div class="container-md border rounded-1 p-2 m-4 w-100 mh-100 MyContainer" style="height: 35rem;">
                 <div class="container w-75 d-flex justify-content-center">
                     <form class="row g-3 needs-validation m-2" asp-action="CreateCustomer" asp-controller="Customer" method="post" >
-                        <div class="col-md-6">
-                            <label for="validationCustom01" class="form-label">İsim</label>
-                            <input type="text" class="form-control" asp-for="firstName" id="validationCustom01" >
-                            <span asp-validation-for="firstName" class="text-danger"></span>
-                          
-                        </div>
-                        <div class="col-md-6">
-                            <label for="validationCustom02" class="form-label">Soyisim</label>
-                            <input type="text" class="form-control" asp-for="lastName" id="validationCustom02" > 
-                            <span asp-validation-for="lastName" class="text-danger"></span>
+                        <div class="col-md-12">
+                            <label for="validationCustom01" class="form-label">Şirket Adı</label>
+                            <input type="text" class="form-control" asp-for="companyName" id="validationCustom01" >
+                            <span asp-validation-for="companyName" class="text-danger"></span>
                           
                         </div>
                         <div class="col-md-12">
@@ -34,28 +28,29 @@
                         </div>
                         <div class="col-md-6">
                             <label for="validationCustom03" class="form-label">Şehir</label>
-                            <input type="text" class="form-control" asp-for="city" id="validationCustom03" required>
+                            <input type="text" class="form-control" asp-for="cityname" id="validationCustom03" required>
+                            <span asp-validation-for="cityname" class="text-danger"></span>
                             <div class="invalid-feedback">
                                 Please provide a valid city.
                             </div>
                         </div>
                         <div class="col-md-6">
                             <label for="validationCustom04" class="form-label">İlçe</label>
-                            <input type="text" class="form-control"asp-for="town" id="validationCustom04" required>
+                            <input type="text" class="form-control"asp-for="townname" id="validationCustom04" required>
+                            <span asp-validation-for="townname" class="text-danger"></span>
                             <div class="invalid-feedback">
                                 Please provide a valid Town.
                             </div>
                         </div>
-
-                        <div class="form-check col-md-4 m-2">
-                            <input type="radio" class="form-check-input" id="validationFormCheck2"  required>
-                            <label class="form-check-label" for="validationFormCheck2">Kadın</label>
+                        <div class="col-md-12">
+                            <label for="validationCustom02" class="form-label">MailAddres</label>
+                            <input type="text" class="form-control" asp-for="mailaddress" id="validationCustom02" required>
+                            <span asp-validation-for="mailaddress" class="text-danger"></span>
+                            <div class="invalid-feedback">
+                                Please provide a valid Town.
+                            </div>
                         </div>
-                        <div class="form-check mb-3 col-md-4 m-2">
-                            <input type="radio" class="form-check-input" id="validationFormCheck3"  required>
-                            <label class="form-check-label" for="validationFormCheck3">Erkek</label>
-                            <div class="invalid-feedback">More example invalid feedback text</div>
-                        </div>
+                     
                         <div class="col-12 d-flex justify-content-center">
                             <button class="btn MyBtn w-100" type="submit">KAYDET</button>
                         </div>

@@ -1,11 +1,4 @@
-﻿
-
-
-
-@* <--!asp-route-id="1"-->*@
-
-
-@model List< VM_List_Customer>
+﻿@model List< VM_List_Customer>
 
 <div class="row">
     <div class="col-md-2">
@@ -19,11 +12,9 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Ad Soyad</th>
+                                <th scope="col">Şirket Adı</th>
                                 <th scope="col">EPosta</th>
                                 <th scope="col">Telefon No</th>
-                                <th scope="col">Şehir</th>
-                                <th scope="col">İlçe</th>
                                 <th scope="col">Aksiyon</th>
                             </tr>
                         </thead>
@@ -33,11 +24,9 @@
                                 @foreach (var customer in Model)
                                 {
                                     <tr>
-                                        <td>@customer.firstName @customer.lastName</td>
+                                        <td>@customer.companyName</td>
                                         <td>@customer.ePosta</td>
                                         <td>@customer.phoneNumber</td>
-                                        <td>@customer.city</td>
-                                        <td>@customer.town</td>
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                                                 <a asp-controller="Customer" asp-action="DetailCustomer" asp-route-id="@customer.ID" class="btn BtnDuzenle btn-sm">Detay</a>

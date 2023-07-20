@@ -92,26 +92,27 @@ namespace TWYLisans.WebUI.Controllers
 
         public async Task<IActionResult> DetailCustomer(int id)
        {
-            //Customer customer = await _readCustomerRepository.GetByIdAsync(id);
-            //List<Product> products = _readProductRepository.GetWhere(p=> p.customer == customer).ToList();
-           
-            //customer.products = new List <Product>();
-            //VM_List_Customer mCustomer = new VM_List_Customer
+            Customer customer = await _readCustomerRepository.GetByIdCustomerAsync(id);
+            
+
+            
+            VM_List_Customer mCustomer = new VM_List_Customer
+            {
+               
+                companyName = customer.companyName,
+               
+                phoneNumber = customer.phoneNumber,
+                cityname = customer.town.city.cityname,
+                townname = customer.town.townname,
+                ID = customer.ID,
+                ePosta = customer.ePosta,
+               
+            };
+            //List<VM_List_Licence> mProducts = new();
+            //if (products.Count > 0)
             //{
-            //    createdDate = customer.createdDate,
-            //    firstName = customer.firstName,
-            //    lastName = customer.lastName,
-            //    phoneNumber = customer.phoneNumber,
-            //    city = customer.city,
-            //    town = customer.town,
-            //    ID = customer.ID,
-            //    ePosta = customer.ePosta,
-            //    gender = customer.gender,
-            //};
-            //List<VM_List_Product> mProducts = new();
-            //if(products.Count > 0)
-            //{
-            //    foreach(var product in products) {
+            //    foreach (var product in products)
+            //    {
 
             //        VM_List_Product m = new VM_List_Product
             //        {
@@ -123,12 +124,12 @@ namespace TWYLisans.WebUI.Controllers
             //        mProducts.Add(m);
             //    }
             //}
-            //VM_Details_Customer model = new VM_Details_Customer
-            //{
-            //    customer = mCustomer,
-            //    products = mProducts
-            //};
-            return View();
+            VM_Details_Customer model = new VM_Details_Customer()
+            {
+                customer = mCustomer,
+                
+            };
+            return View(model);
         }
         
         public async Task<IActionResult> DeleteCustomer(int id)

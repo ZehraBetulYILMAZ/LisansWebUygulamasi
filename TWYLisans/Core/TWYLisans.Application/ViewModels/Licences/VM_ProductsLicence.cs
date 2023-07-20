@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TWYLisans.Application.ViewModels.Products;
 
-namespace TWYLisans.Application.ViewModels.Products
+namespace TWYLisans.Application.ViewModels.Licences
 {
     public class VM_ProductsLicence
     {

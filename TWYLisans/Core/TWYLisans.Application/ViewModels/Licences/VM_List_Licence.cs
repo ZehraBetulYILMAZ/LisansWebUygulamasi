@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TWYLisans.Application.ViewModels.Products
+namespace TWYLisans.Application.ViewModels.Licences
 {
     public class VM_List_Licence
     {
@@ -12,5 +12,6 @@ namespace TWYLisans.Application.ViewModels.Products
         public DateTime createdDate { get; set; }
         public Guid licenceKey { get; set; }
         public DateTime expiryDate { get; set; }
+
     }
 }

@@ -13,16 +13,16 @@ namespace TWYLisans.Application.Validators.Customers
     {
         public CreateCustomerValidator()
         {
-            RuleFor(c => c.firstName)
-                .NotEmpty().NotNull().WithMessage("İsim alanı boş geçilemez");
-            RuleFor(c => c.lastName)
-                .NotEmpty().NotNull().WithMessage("Soyisim alanı boş geçilemez");
-            RuleFor(c => c.ePosta)
-                .NotEmpty().NotNull().WithMessage("EPosta alanı boş geçilemez")
-                .EmailAddress();
-            RuleFor(c => c.phoneNumber)
-                .NotEmpty().NotNull().WithMessage("Telefon No alanı boş geçilemez")
-                .Length(12);
+            //RuleFor(c => c.firstName)
+            //    .NotEmpty().NotNull().WithMessage("İsim alanı boş geçilemez");
+            //RuleFor(c => c.lastName)
+            //    .NotEmpty().NotNull().WithMessage("Soyisim alanı boş geçilemez");
+            //RuleFor(c => c.ePosta)
+            //    .NotEmpty().NotNull().WithMessage("EPosta alanı boş geçilemez")
+            //    .EmailAddress();
+            //RuleFor(c => c.phoneNumber)
+            //    .NotEmpty().NotNull().WithMessage("Telefon No alanı boş geçilemez")
+            //    .Length(12);
         } 
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TWYLisans.Application.Repositories;
 using TWYLisans.Application.ViewModels.Customers;
+using TWYLisans.Application.ViewModels.Licences;
 using TWYLisans.Application.ViewModels.Products;
 using TWYLisans.Domain.Entities;
 using TWYLisans.Infrastructure;
@@ -151,7 +152,7 @@ namespace TWYLisans.WebUI.Controllers
         {
            
             //Product product = TypeConversion.Conversion<VM_List_Product,Product>(model);
-            Licence licence = TypeConversion.Conversion<VM_List_Licence, Licence>(model.licence);
+            //Licence licence = TypeConversion.Conversion<VM_List_Licence, Licence>(model.licence);
             return RedirectToAction("ListProduct");
         }
         public IActionResult ProductDelete()

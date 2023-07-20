@@ -16,7 +16,7 @@
                                 <p class="myP">Ad:</p>
                                 <div class="row w-100 ">
                                     <div class="col-4">
-                                        <h6>@Model.customer.firstName</h6>
+                                        <h6>@Model.customer.companyName</h6>
                                     </div>
                                     <div class="col-4">
                                         <div class="row text-start">
@@ -29,35 +29,13 @@
                                                 <div id="collapse0" class="panel-collapse collapse in">
                                                     <span class="text">
                                                         <label>
-                                                            <input type="text" asp-for="customer.firstName">
+                                                            <input type="text" asp-for="@Model.customer.companyName">
                                                         </label>
                                                     </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="myP">Soyad :</p>
-                                        <div class="col-4">
-                                        <h6>@Model.customer.lastName</h6>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="row text-start">
-                                                <div class="col-md-2">
-                                                    <a data-toggle="collapse" class="myA" href="#collapse10">
-                                                        <i class="indicator fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <div id="collapse10" class="panel-collapse collapse in">
-                                                        <span class="text">
-                                                            <label>
-                                                            <input type="text" asp-for="customer.lastName">
-                                                            </label>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     <!--satır başlangıcı -->
                                     <p class="myP">Eposta :</p>
                                     <div class="col-5">
@@ -74,7 +52,7 @@
                                                 <div id="collapse1" class="panel-collapse collapse in">
                                                     <span class="text">
                                                         <label>
-                                                            <input type="text" asp-for="customer.ePosta">
+                                                            <input type="text" asp-for="@Model.customer.ePosta">
                                                         </label>
                                                     </span>
                                                 </div>
@@ -97,7 +75,7 @@
                                                 <div id="collapse2" class="panel-collapse collapse in">
                                                     <span class="text">
                                                         <label>
-                                                            <input type="text" asp-for="customer.phoneNumber">
+                                                            <input type="text" asp-for="@Model.customer.phoneNumber">
                                                         </label>
                                                     </span>
                                                 </div>
@@ -107,7 +85,7 @@
                                     <!--satır başlangıcı -->
                                     <p class="myP">Şehir :</p>
                                     <div class="col-4">
-                                        <h6>@Model.customer.city</h6>
+                                        <h6>@Model.customer.cityname</h6>
                                     </div>
                                     <div class="col-4">
                                         <div class="row text-start">
@@ -120,7 +98,7 @@
                                                 <div id="collapse3" class="panel-collapse collapse in">
                                                     <span class="text">
                                                         <label>
-                                                            <input type="text" asp-for="customer.city">
+                                                            <input type="text" asp-for="@Model.customer.cityname">
                                                         </label>
                                                     </span>
                                                 </div>
@@ -130,7 +108,7 @@
                                     <!--satır başlangıcı -->
                                     <p class="myP">İlçe :</p>
                                     <div class="col-4">
-                                        <h6>@Model.customer.town</h6>
+                                        <h6>@Model.customer.townname</h6>
                                     </div>
                                     <div class="col-4">
                                         <div class="row text-start">
@@ -143,37 +121,30 @@
                                                 <div id="collapse4" class="panel-collapse collapse in">
                                                     <span class="text">
                                                         <label>
-                                                            <input type="text" asp-for="customer.town">
+                                                            <input type="text" asp-for="@Model.customer.townname">
                                                         </label>
                                                     </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!--satır başlangıcı -->
-                                    <p class="myP">Cinsiyet :</p>
+                                      <!--satır başlangıcı -->
+                                    <p class="myP">MailAdress :</p>
                                     <div class="col-4">
-                                        @if (Model.customer.gender)
-                                        {
-                                            <h6>Kadın</h6>
-                                        }
-                                        else
-                                        {
-                                            <h6>Erkek</h6>
-                                        }
+                                        <h6>@Model.customer.mailaddress</h6>
                                     </div>
                                     <div class="col-4">
                                         <div class="row text-start">
                                             <div class="col-md-2">
-                                                <a data-toggle="collapse" class="myA" href="#collapse5">
+                                                <a data-toggle="collapse" class="myA" href="#collapse4">
                                                     <i class="indicator fa fa-pencil-square-o" aria-hidden="true"></i>
                                                 </a>
                                             </div>
                                             <div class="col-md-2">
-                                                <div id="collapse5" class="panel-collapse collapse in">
+                                                <div id="collapse4" class="panel-collapse collapse in">
                                                     <span class="text">
                                                         <label>
-                                                            <input type="text">
+                                                            <input type="text" asp-for="@Model.customer.mailaddress">
                                                         </label>
                                                     </span>
                                                 </div>
@@ -200,15 +171,15 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @if (Model.products != null)
+                                    @if (Model.licence != null)
                                     {
-                                        foreach (var product in Model.products)
+                                        foreach (var licence in Model.licence)
                                         {
                                             <tr>
-                                                <td>@product.name</td>
+                                                <td>@licence.licenceKey</td>
                                                 <td>
                                                     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                                        <a asp-controller="Product" asp-action="ProductDetails" asp-route-id="@product.ID" class="btn BtnDuzenle btn-sm">Detay</a>
+                                                        <a asp-controller="Product" asp-action="ProductDetails" asp-route-id="@licence.ID" class="btn BtnDuzenle btn-sm">Detay</a>
                                                         <a asp-controller="Product" asp-action="ListProduct"  class="btn BtnSil btn-sm">Sil</a>
                                                     </div>
                                                 </td>
