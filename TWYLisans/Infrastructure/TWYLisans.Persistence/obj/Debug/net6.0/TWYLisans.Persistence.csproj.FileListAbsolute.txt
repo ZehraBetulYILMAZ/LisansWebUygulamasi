@@ -17,3 +17,22 @@ C:\Users\redli\source\repos\TWYLisans\Infrastructure\TWYLisans.Persistence\obj\D
 C:\Users\redli\source\repos\TWYLisans\Infrastructure\TWYLisans.Persistence\obj\Debug\net6.0\ref\TWYLisans.Persistence.dll
 C:\Users\redli\source\repos\TWYLisans\Infrastructure\TWYLisans.Persistence\bin\Debug\net6.0\TWYLisans.Persistence.runtimeconfig.json
 C:\Users\redli\source\repos\TWYLisans\Infrastructure\TWYLisans.Persistence\obj\Debug\net6.0\TWYLisans.Persistence.genruntimeconfig.cache
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\bin\Debug\net6.0\TWYLisans.Persistence.deps.json
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\bin\Debug\net6.0\TWYLisans.Persistence.runtimeconfig.json
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\bin\Debug\net6.0\TWYLisans.Persistence.dll
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\bin\Debug\net6.0\TWYLisans.Persistence.pdb
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\bin\Debug\net6.0\TWYLisans.Application.dll
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\bin\Debug\net6.0\TWYLisans.Domain.dll
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\bin\Debug\net6.0\TWYLisans.Application.pdb
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\bin\Debug\net6.0\TWYLisans.Domain.pdb
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\obj\Debug\net6.0\TWYLisans.Persistence.csproj.AssemblyReference.cache
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\obj\Debug\net6.0\TWYLisans.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\obj\Debug\net6.0\TWYLisans.Persistence.AssemblyInfoInputs.cache
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\obj\Debug\net6.0\TWYLisans.Persistence.AssemblyInfo.cs
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\obj\Debug\net6.0\TWYLisans.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\obj\Debug\net6.0\TWYLisans.Persistence.csproj.CopyComplete
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\obj\Debug\net6.0\TWYLisans.Persistence.dll
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\obj\Debug\net6.0\refint\TWYLisans.Persistence.dll
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\obj\Debug\net6.0\TWYLisans.Persistence.pdb
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\obj\Debug\net6.0\TWYLisans.Persistence.genruntimeconfig.cache
+C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Persistence\obj\Debug\net6.0\ref\TWYLisans.Persistence.dll

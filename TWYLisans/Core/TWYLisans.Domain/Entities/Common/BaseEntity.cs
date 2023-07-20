@@ -13,6 +13,6 @@ namespace TWYLisans.Domain.Entities.Common
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID{ get; set; }
-        public DateTime createdDate { get; set; }
+    
     }
 }

@@ -21,9 +21,9 @@ namespace TWYLisans.WebUI.Controllers
         }
         public async Task<IActionResult> Index()
         {
-              var   das= _productReadRepository.GetAll();
-            var c = das.FirstOrDefault();
-            var b = await _productReadRepository.GetSingleAsync(c => c.name == "a",false);
+            //  var   das= _productReadRepository.GetAll();
+            //var c = das.FirstOrDefault();
+            //var b = await _productReadRepository.GetSingleAsync(c => c.name == "a",false);
            
             return View();
         }

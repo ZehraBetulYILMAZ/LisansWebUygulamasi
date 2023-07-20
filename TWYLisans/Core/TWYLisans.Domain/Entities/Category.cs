@@ -10,7 +10,8 @@ namespace TWYLisans.Domain.Entities
 {
     public class Category:BaseEntity
     {
-        public string name { get; set; }
-        public ICollection<Product> ?products{ get; set; }
+        public string categoryName { get; set; } = null!;
+
+        public virtual ICollection<Product> products { get; set; } = new List<Product>();
     }
 }

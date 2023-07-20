@@ -9,5 +9,6 @@ namespace TWYLisans.Application.Repositories
 {
     public interface IReadCustomerRepository:IReadRepository<Customer>
     {
+        Task<Customer> GetByIdCustomerAsync(int id, bool tracking = true);
     }
 }

@@ -55,97 +55,97 @@ namespace TWYLisans.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateProduct(VM_ProductsLicence model)
         {
-                 Customer customer = await _readCustomerRepository.GetByIdAsync(model.customerId);
-            Product mproduct = TypeConversion.Conversion<VM_Create_Product, Product>(model.products);
-            //Licence licence = TypeConversion.Conversion<VM_Create_Licence,Licence>(model.licences);
+          //       Customer customer = await _readCustomerRepository.GetByIdAsync(model.customerId);
+          //  Product mproduct = TypeConversion.Conversion<VM_Create_Product, Product>(model.products);
+          //  //Licence licence = TypeConversion.Conversion<VM_Create_Licence,Licence>(model.licences);
            
-            var b = Guid.Parse(model.licences.licenceKey);
-            Licence mlicence = new Licence
-            {
-                createdDate = DateTime.Now,
-                expiryDate = model.licences.expiryDate,
-                licenceKey = b,
-                product = mproduct
-            };
-          //  mproduct.licences.Add(mlicence);
+          //  var b = Guid.Parse(model.licences.licenceKey);
+          //  Licence mlicence = new Licence
+          //  {
+          //      createdDate = DateTime.Now,
+          //      expiryDate = model.licences.expiryDate,
+          //      licenceKey = b,
+          //      product = mproduct
+          //  };
+          ////  mproduct.licences.Add(mlicence);
             
-            mproduct.customer = customer;
+          //  mproduct.customer = customer;
         
-            isOk =  await  _writeProductRepository.AddAsync(mproduct);
+          //  isOk =  await  _writeProductRepository.AddAsync(mproduct);
        
-            await _writeProductRepository
-                .SaveAsync();
-            await _writeLicenceRepository.AddAsync(mlicence);
-            await _writeLicenceRepository.SaveAsync();
+          //  await _writeProductRepository
+          //      .SaveAsync();
+          //  await _writeLicenceRepository.AddAsync(mlicence);
+          //  await _writeLicenceRepository.SaveAsync();
             return View();
         }
         public async Task<IActionResult> ListProduct()
         {
 
-            var products = _readProductRepository.GetAll().ToList();
-            List<VM_List_Product> models = new();
-            if(products != null && products.Count > 0)
-            {
-               foreach(var product in products)
-                {
-                    VM_List_Product model = new VM_List_Product();
-                    Customer customer = await _readCustomerRepository.GetByIdAsync(product.customerID);
-                    VM_List_Customer mCustomer = new VM_List_Customer();
-                    model.ID =  product.ID;
-                    model.name= product.name;
-                    model.description= product.description;
+            //var products = _readProductRepository.GetAll().ToList();
+            //List<VM_List_Product> models = new();
+            //if(products != null && products.Count > 0)
+            //{
+            //   foreach(var product in products)
+            //    {
+            //        VM_List_Product model = new VM_List_Product();
+            //        Customer customer = await _readCustomerRepository.GetByIdAsync(product.customerID);
+            //        VM_List_Customer mCustomer = new VM_List_Customer();
+            //        model.ID =  product.ID;
+            //        model.name= product.name;
+            //        model.description= product.description;
                    
-                    if(customer != null)
-                    {
-                       mCustomer.ID = customer.ID;
-                        mCustomer.lastName = customer.lastName;
-                        mCustomer.firstName = customer.firstName;
-                        model.customer = mCustomer;
-                    }
-                    Licence licence = await _readLicenceRepository.GetSingleAsync(l => l.productID == product.ID);
-                    VM_List_Licence mLicence = new();
-                    if(licence != null)
-                    {
-                        mLicence.ID= licence.ID;
-                        mLicence.licenceKey = licence.licenceKey;
-                        model.licence = mLicence;
-                    }
-                    models.Add(model);
-                }
+            //        if(customer != null)
+            //        {
+            //           mCustomer.ID = customer.ID;
+            //            mCustomer.lastName = customer.lastName;
+            //            mCustomer.firstName = customer.firstName;
+            //            model.customer = mCustomer;
+            //        }
+            //        Licence licence = await _readLicenceRepository.GetSingleAsync(l => l.productID == product.ID);
+            //        VM_List_Licence mLicence = new();
+            //        if(licence != null)
+            //        {
+            //            mLicence.ID= licence.ID;
+            //            mLicence.licenceKey = licence.licenceKey;
+            //            model.licence = mLicence;
+            //        }
+            //        models.Add(model);
+            //    }
 
-            }
-            return View(models);
+            //}
+            return View();
         }
         public async Task<IActionResult> ProductDetails(int id)
         {
-            Product product  = await _readProductRepository.GetByIdAsync(id);
-            VM_List_Product model = new();
-            VM_List_Customer mCustomer = new();
-            VM_List_Licence mLicence = new();
-            if(product != null)
-            {
-                Customer customer = await _readCustomerRepository.GetByIdAsync(product.customerID);
-                Licence licence =await _readLicenceRepository.GetSingleAsync(l => l.productID == product.ID);
-                if(licence != null)
-                {
-                    mLicence.licenceKey = licence.licenceKey;
-                    mLicence.ID = licence.ID;
-                    mLicence.expiryDate = licence.expiryDate;
-                    mLicence.createdDate = licence.createdDate;
+            //Product product  = await _readProductRepository.GetByIdAsync(id);
+            //VM_List_Product model = new();
+            //VM_List_Customer mCustomer = new();
+            //VM_List_Licence mLicence = new();
+            //if(product != null)
+            //{
+            //    Customer customer = await _readCustomerRepository.GetByIdAsync(product.customerID);
+            //    Licence licence =await _readLicenceRepository.GetSingleAsync(l => l.productID == product.ID);
+            //    if(licence != null)
+            //    {
+            //        mLicence.licenceKey = licence.licenceKey;
+            //        mLicence.ID = licence.ID;
+            //        mLicence.expiryDate = licence.expiryDate;
+            //        mLicence.createdDate = licence.createdDate;
 
-                }
-                mCustomer.ID = customer.ID;
-                mCustomer.lastName = customer.lastName;
-                mCustomer.firstName = customer.firstName;
-                model.ID = product.ID;
-                model.name = product.name;
-                model.description = product.description;
-                model.createdDate = product.createdDate;
-                model.licence = mLicence;
-                model.customer = mCustomer;
+            //    }
+            //    mCustomer.ID = customer.ID;
+            //    mCustomer.lastName = customer.lastName;
+            //    mCustomer.firstName = customer.firstName;
+            //    model.ID = product.ID;
+            //    model.name = product.name;
+            //    model.description = product.description;
+            //    model.createdDate = product.createdDate;
+            //    model.licence = mLicence;
+            //    model.customer = mCustomer;
                 
-            }  
-            return View(model);
+            //}  
+            return View();
         }
         public IActionResult ProductUpdate(VM_List_Product model)
         {
