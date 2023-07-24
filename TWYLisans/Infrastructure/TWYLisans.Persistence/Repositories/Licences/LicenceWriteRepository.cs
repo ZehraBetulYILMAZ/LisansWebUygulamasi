@@ -19,7 +19,14 @@ namespace TWYLisans.Persistence.Repositories.Licences
 
         public bool RemoveLicence(int id)
         {
-            throw new NotImplementedException();
+            var entity = Table.Include(e => e.product).FirstOrDefault(c => c.ID == id);
+            if (entity != null)
+            {
+                entity.active = false;
+                EntityEntry<Licence> entry = Table.Update(entity);
+                return entry.State == EntityState.Modified;
+            }
+            return false;
         }
 
         public bool UpdateLicence (Licence entity)

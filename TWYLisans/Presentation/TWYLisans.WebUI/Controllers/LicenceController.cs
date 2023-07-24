@@ -109,5 +109,18 @@ namespace TWYLisans.WebUI.Controllers
             TempData["message"] = JsonConvert.SerializeObject(msg);
             return RedirectToAction("ListLicence");
         }
+        public async Task<IActionResult> DeleteLicence(int id)
+        {
+            isOk = _writeLicenceRepository.RemoveLicence(id);
+            await _writeLicenceRepository.SaveAsync();
+
+            AlertMessage msg = new AlertMessage();
+            msg.message = isOk ? "Kayıt başarıyla silindi" : "Kayıt Silinemedi";
+            msg.alertType = isOk ? "success" : "danger";
+            TempData["message"] = JsonConvert.SerializeObject(msg);
+
+
+            return RedirectToAction("ListLicence");
+        }
     }
 }

@@ -21,7 +21,21 @@ namespace TWYLisans.Persistence.Repositories
 
         public bool RemoveProduct(int id)
         {
-            throw new NotImplementedException();
+            var entity = Table.Include(e => e.licences).FirstOrDefault(c => c.ID == id);
+            if (entity != null)
+            {
+                entity.active = false;
+                if (entity.licences.Count > 0)
+                {
+                    foreach (var l in entity.licences)
+                    {
+                        l.active = false;
+                    }
+                }
+                EntityEntry<Product> entry = Table.Update(entity);
+                return entry.State == EntityState.Modified;
+            }
+            return false;
         }
 
         public bool UpdateProduct(Product nProduct)

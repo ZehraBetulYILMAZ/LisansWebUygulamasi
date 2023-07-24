@@ -111,8 +111,15 @@ namespace TWYLisans.WebUI.Controllers
             TempData["message"] = JsonConvert.SerializeObject(msg);
             return RedirectToAction("ListProduct");
         }
-        public IActionResult ProductDelete()
+        public async Task<IActionResult> DeleteProduct(int id)
         {
+            isOk = _writeProductRepository.RemoveProduct(id);
+            await _writeProductRepository.SaveAsync();
+
+            AlertMessage msg = new AlertMessage();
+            msg.message = isOk ? "Kayıt başarıyla silindi" : "Kayıt Silinemedi";
+            msg.alertType = isOk ? "success" : "danger";
+            TempData["message"] = JsonConvert.SerializeObject(msg);
             return RedirectToAction("ListProduct");
         }
 
