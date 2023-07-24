@@ -31,19 +31,7 @@ namespace TWYLisans.Persistence.Repositories
             await Table.AddRangeAsync(entity);
             return true;
         }
-
-        public bool Remove(T entity)
-        {
-            EntityEntry<T> entry = Table.Remove(entity);
-            return entry.State == EntityState.Deleted;
-        }
-        public async Task<bool> RemoveAsync(int id)
-        {
-            T entity = await Table.FirstOrDefaultAsync(i=> i.ID == id);
-            return Remove(entity);
-        }
-
-        public bool Update(T entity)
+       public bool Update(T entity)
         {
             EntityEntry<T> entry = Table.Update(entity);
             return entry.State == EntityState.Modified;

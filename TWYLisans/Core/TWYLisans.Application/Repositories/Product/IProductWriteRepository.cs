@@ -9,6 +9,8 @@ namespace TWYLisans.Application.Repositories
 {
     public interface IProductWriteRepository:IWriteRepository<Product>
     {
+        bool RemoveProduct(int id);
+        bool UpdateProduct(Product nProduct);
 
     }
 }

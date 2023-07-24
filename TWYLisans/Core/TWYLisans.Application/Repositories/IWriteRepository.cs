@@ -11,8 +11,6 @@ namespace TWYLisans.Application.Repositories
     {
         Task<bool> AddAsync(T entity);
         Task<bool> AddAsync(List<T> entity);
-        bool Remove(T entity);
-        Task<bool> RemoveAsync(int id);
         bool Update(T entity);
         Task<int> SaveAsync();
     }

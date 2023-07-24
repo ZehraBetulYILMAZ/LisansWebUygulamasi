@@ -9,5 +9,7 @@ namespace TWYLisans.Application.Repositories
 {
     public interface ILicenceWriteRepository:IWriteRepository<Licence>
     {
+        bool RemoveLicence(int id);
+        bool UpdateLicence(Licence entity);
     }
 }

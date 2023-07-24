@@ -32,3 +32,20 @@ C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\In
 C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\obj\Debug\net6.0\refint\TWYLisans.Infrastructure.dll
 C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\obj\Debug\net6.0\TWYLisans.Infrastructure.pdb
 C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\obj\Debug\net6.0\ref\TWYLisans.Infrastructure.dll
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\bin\Debug\net6.0\TWYLisans.Infrastructure.deps.json
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\bin\Debug\net6.0\TWYLisans.Infrastructure.dll
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\bin\Debug\net6.0\TWYLisans.Infrastructure.pdb
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\bin\Debug\net6.0\TWYLisans.Application.dll
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\bin\Debug\net6.0\TWYLisans.Domain.dll
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\bin\Debug\net6.0\TWYLisans.Application.pdb
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\bin\Debug\net6.0\TWYLisans.Domain.pdb
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\obj\Debug\net6.0\TWYLisans.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\obj\Debug\net6.0\TWYLisans.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\obj\Debug\net6.0\TWYLisans.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\obj\Debug\net6.0\TWYLisans.Infrastructure.AssemblyInfo.cs
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\obj\Debug\net6.0\TWYLisans.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\obj\Debug\net6.0\TWYLisans.Infrastructure.csproj.CopyComplete
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\obj\Debug\net6.0\TWYLisans.Infrastructure.dll
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\obj\Debug\net6.0\refint\TWYLisans.Infrastructure.dll
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\obj\Debug\net6.0\TWYLisans.Infrastructure.pdb
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Infrastructure\TWYLisans.Infrastructure\obj\Debug\net6.0\ref\TWYLisans.Infrastructure.dll

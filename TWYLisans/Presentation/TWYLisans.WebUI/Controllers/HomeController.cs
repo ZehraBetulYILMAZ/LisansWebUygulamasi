@@ -4,7 +4,6 @@ using System.Diagnostics;
 using TWYLisans.Application.Repositories;
 using TWYLisans.Application.ViewModels.Products;
 using TWYLisans.Domain.Entities;
-using TWYLisans.Infrastructure;
 using TWYLisans.WebUI.Models;
 
 namespace TWYLisans.WebUI.Controllers
@@ -21,10 +20,6 @@ namespace TWYLisans.WebUI.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            //  var   das= _productReadRepository.GetAll();
-            //var c = das.FirstOrDefault();
-            //var b = await _productReadRepository.GetSingleAsync(c => c.name == "a",false);
-           
             return View();
         }
         //[HttpPost]

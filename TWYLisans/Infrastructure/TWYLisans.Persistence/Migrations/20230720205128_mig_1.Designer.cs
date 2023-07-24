@@ -12,7 +12,7 @@ using TWYLisans.Persistence.Context;
 namespace TWYLisans.Persistence.Migrations
 {
     [DbContext(typeof(TWYLisansDbContext))]
-    [Migration("20230720124452_mig_1")]
+    [Migration("20230720205128_mig_1")]
     partial class mig_1
     {
         /// <inheritdoc />

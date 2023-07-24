@@ -1,55 +1,76 @@
-﻿@*@model VM_ProductsLicence
+﻿@model VM_Create_Product
 
 <div class="row">
-<div class="col-md-2">
-   
-</div>
-<div class="col-md-8">
-<main role="main" class="pb-3">
-     <div class="container-md border border MyContainer rounded-1 p-2 m-4 w-100 mh-100" style="height: 35rem;">
-        <div class="container w-75">
-            <div asp-validation-summary="All"></div>
-            <form asp-action="CreateProduct" asp-controller="Product" method="post">
-                <div class="form-group m-2">
-                    <label for="exampleInputName">Product Name</label>
-                    <input type="text" class="form-control" asp-for="@Model.products.name" id="exampleInputName" placeholder="Enter Product Name">
-                            <span class="text-danger" asp-validation-for="@Model.products.name"></span>
-                </div>
-                <div class="form-group m-2">
-                    <label for="exampleInputDescription">Prouduct Description</label>
-                            <textarea class="form-control" asp-for="@Model.products.description" id="exampleInputDescription" placeholder="Enter Product Description"> </textarea>
-                            <span class="text-danger border-bottom border-danger" asp-validation-for="@Model.products.description"></span>
-                </div>
-               
-                <div class="form-group m-2">
-                    <label for="exampleInputLicenceKey">Lisans Anahtarı : </label>
-                            <input type="text" class="form-control" asp-for="@Model.licences.licenceKey" id="exampleInputLicenceKey" placeholder="Enter Licence Key">
-                            <span class="text-danger" asp-validation-for="@Model.products.name"></span>
-                </div>
-                <div class="form-group m-2">
-                    <label for="exampleInputExpiryDate">Kullanım Dolum Zamanı : </label>
-                            <input type="date" class="form-control" asp-for="@Model.licences.expiryDate" id="exampleInputExpiryDate" placeholder="Enter Licence Key">
-                    <span class="text-danger" asp-validation-for="@Model.products.name"></span>
-                </div> 
-                <input type="hidden"  asp-for="@Model.customerId"/>
-                <button type="submit" style="background-color:#474745; color:#ffffff" class="btn w-100 ">Kaydet</button>
-            </form>
-                    <div class="card">
-                        <div class="row m-3">
-                            <div class="col-md-12">
-                                <p class="myP">Lisans Anahtarı Oluştur : </p>
-                            </div>
-                            <div class="col-md-4">
-                                <button onclick="myFunction()" type="button" class="btn btn-outline-dark">Oluştur</button>
-                            </div>
-                            <div class="col-md-8">
-                                <p id="myGuid">AAAAA</p>
-                            </div>
+    <div class="col-md-2">
+    
+    </div>
+    <div class="col-md-8">
+        <main role="main" class="pb-3">
+            <div class="container  border MyContainer rounded-1 p-2 m-4 w-100 mh-100" style="height:20rem;">
+                <div class="container w-75" style="margin-top:35px;">
+                    <div asp-validation-summary="All"></div>
+                    <form asp-action="CreateProduct" asp-controller="Product" method="post">
+                        <div class="form-group m-2">
+                        <label for="exampleInputName">Product Name</label>
+                        <input type="text" class="form-control" asp-for="@Model.productName" id="exampleInputName" placeholder="Enter Product Name">
+                        <span class="text-danger" asp-validation-for="@Model.productName"></span>
                         </div>
+                        <div class="form-group m-2">
+                        <label for="exampleInputDescription">Prouduct Description</label>
+                        <textarea class="form-control" asp-for="@Model.productDescription" id="exampleInputDescription" placeholder="Enter Product Description"> </textarea>
+                        <span class="text-danger border-bottom border-danger" asp-validation-for="@Model.productDescription"></span>
+                        </div>
+                       @if (Model.categories != null && Model.categories.Count > 0)
+                        {
+                            <select class="form-select" asp-for="@Model.categoryID" aria-label="Default select example">
+                                <option selected>Kategori Seçiniz</option>
+                                @foreach (var category in Model.categories)
+                                {
+                                    <option value="@category.ID">@category.categoryName</option>
+                                }
+                            </select>
+                        }
+                        else
+                        {
+                            <select class="form-select" aria-label="Disabled select example" disabled>
+                                <option selected>Lütfen, önce kategori ekeyiniz</option>
+                            </select>
+                        }
+                       <div class="justify-content-center d-flex">
+                            <button type="submit" style="background-color:#474745; color:#ffffff" class="btn w-100 m-3">Kaydet</button>
+                       </div>
+                       
+                    </form>
+                </div>
+            </div>
+            <div class="container    w-50 mh-100 " style="height: 36rem; margin-top:20px;">
+                <div class="card text-center">
+                    <div class="card-header ">
+                        Yeni Kategori Ekleme
                     </div>
-        </div>
-      </div>
- </main>
+                    <div class="card-body">
+                        <div asp-validation-summary="All"></div>
+                        <form asp-action="CreateCategory" asp-controller="Product" method="post">
+                            <div class="form-group m-2">
+                                <label for="exampleInputName">Category Name</label>
+                                <input type="text" class="form-control" asp-for="@Model.categoryName" id="exampleInputName" placeholder="Enter Product Name">
+                                <span class="text-danger" asp-validation-for="@Model.categoryName"></span>
+                            </div>
+
+                            <div class="justify-content-center d-flex">
+                                <button type="submit" style="background-color:#474745; color:#ffffff" class="btn w-100 m-3">Kaydet</button>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="card-footer text-body-secondary">
+                      
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+    <div class="col-md-2">
+    </div>
 </div>
-<div class="col-md-2"></div>
-</div>*@

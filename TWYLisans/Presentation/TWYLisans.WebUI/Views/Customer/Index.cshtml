@@ -1,12 +1,51 @@
-﻿@model VM_Create_Product
+﻿
 
 <div class="row">
     <div class="col-md-2">
-        <partial name="~/Views/Customer/partial/kategori.cshtml" />
     </div>
     <div class="col-md-8">
         <main role="main" class="pb-3">
-            
+            <div class="row" style="margin-top:200px">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body" style="margin:20px">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <div class="rounded-2">
+                                <a asp-action="ListCustomers" asp-controller="Customer" class="btn btn-secondary">
+                                    Müşterileri Listele
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body" style=" margin:20px">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <div class="rounded-2">
+                                <a asp-action="CreateCustomer" asp-controller="Customer" class="btn bg-light">
+                                    Müşteri Ekle
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body" style="margin:20px">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <div class="rounded-2">
+                                <a asp-action="CreateCustomer" asp-controller="Customer" class="btn btn-dark">
+                                    Müşteri Ekle
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
     <div class="col-md-2"></div>

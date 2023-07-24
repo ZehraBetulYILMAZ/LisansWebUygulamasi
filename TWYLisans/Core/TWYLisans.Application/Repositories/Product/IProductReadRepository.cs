@@ -9,5 +9,6 @@ namespace TWYLisans.Application.Repositories
 {
     public interface IProductReadRepository:IReadRepository<Product>
     {
+        Task<Product> GetByIdProductAsync(int id);
     }
 }

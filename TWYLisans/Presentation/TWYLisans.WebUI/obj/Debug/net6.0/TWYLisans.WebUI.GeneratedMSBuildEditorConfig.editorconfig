@@ -9,69 +9,89 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TWYLisans.WebUI
 build_property.RootNamespace = TWYLisans.WebUI
-build_property.ProjectDir = C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLisans.WebUI\
+build_property.ProjectDir = C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLisans.WebUI\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Ayşe kilimci\OneDrive\Belgeler\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLisans.WebUI
+build_property.MSBuildProjectDirectory = C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLisans.WebUI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Customer/CreateCustomer.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Customer/CreateCustomer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ3JlYXRlQ3VzdG9tZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Customer/DetailCustomer.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Customer/DetailCustomer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRGV0YWlsQ3VzdG9tZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Customer/Index.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Customer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Customer/ListCustomers.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Customer/ListCustomers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcTGlzdEN1c3RvbWVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Customer/partial/kategori.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Customer/partial/kategori.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJccGFydGlhbFxrYXRlZ29yaS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Home/Index.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Product/CreateProduct.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Licence/CreateLicence.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljZW5jZVxDcmVhdGVMaWNlbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Licence/DetailLicence.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljZW5jZVxEZXRhaWxMaWNlbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Licence/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljZW5jZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Licence/ListLicence.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljZW5jZVxMaXN0TGljZW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Product/CreateProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDcmVhdGVQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Product/Index.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Product/ListProduct.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Product/ListProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxMaXN0UHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Product/ProductDetails.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Product/ProductDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Shared/_HeaderNavView.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Shared/NoModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5vTW9kZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Shared/_HeaderNavView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXJOYXZWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/_ViewImports.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/_ViewStart.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ayşe kilimci/OneDrive/Belgeler/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Shared/_Layout.cshtml]
+[C:/Users/redli/Documents/GitHub/LisansWebUygulamasi/TWYLisans/Presentation/TWYLisans.WebUI/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-nmrjhzsbgp

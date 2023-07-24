@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using TWYLisans.Application.Repositories;
 using TWYLisans.Application.ViewModels.Customers;
 using TWYLisans.Application.ViewModels.Licences;
 using TWYLisans.Application.ViewModels.Products;
 using TWYLisans.Domain.Entities;
-using TWYLisans.Infrastructure;
+using TWYLisans.WebUI.Models;
 
 namespace TWYLisans.WebUI.Controllers
 {
@@ -12,154 +14,125 @@ namespace TWYLisans.WebUI.Controllers
     {
         private readonly IProductReadRepository _readProductRepository;
         private readonly IProductWriteRepository _writeProductRepository;
-        private readonly IReadCustomerRepository _readCustomerRepository;
-        private readonly IWriteCustomerRepository _writeCustomerRepository;
-        private readonly ILicenceReadRepository _readLicenceRepository;
-        private readonly ILicenceWriteRepository _writeLicenceRepository;
+        private readonly ICategoryReadRepository _readCategoryRepository;
+        private readonly ICategoryWriteRepository _writeCategoryRepository;
         bool isOk = false;
-        public ProductController(IProductReadRepository productReadRepository , IProductWriteRepository productWriteRepository,IReadCustomerRepository readCustomerRepository , IWriteCustomerRepository writeCustomerRepository,
-         ILicenceReadRepository licenceReadRepository, ILicenceWriteRepository licenceWriteRepository)
+        public ProductController(IProductReadRepository productReadRepository , IProductWriteRepository productWriteRepository,
+         ICategoryReadRepository readCategoryRepository, ICategoryWriteRepository writecategoryRepository)
         {
             _readProductRepository = productReadRepository;
             _writeProductRepository = productWriteRepository;
-            _readCustomerRepository = readCustomerRepository;
-            _writeCustomerRepository = writeCustomerRepository;
-            _readLicenceRepository = licenceReadRepository;
-            _writeLicenceRepository = licenceWriteRepository;
+            _readCategoryRepository = readCategoryRepository;
+            _writeCategoryRepository = writecategoryRepository;
         }
         public IActionResult Index()
         { 
-            //Random random = new Random();
-            //int index = (int)random.Next(1, 19);
-            //Customer customer1 = await _readCustomerRepository.GetByIdAsync(index);
-            //Product product = new Product
-            //{
-            //    createdDate = DateTime.Now,
-            //    name = FakeData.NameData.GetCompanyName() + " Ürünü",
-            //    description = FakeData.TextData.GetSentences(5),
-            //    customer = customer1,
-
-            //};
-            //await _writeProductRepository.AddAsync(product);
-            //await _writeProductRepository.SaveAsync();
             return View();
         }
-        public IActionResult CreateProduct(int id)
+        public IActionResult CreateProduct()
         {
-            VM_ProductsLicence model = new();
-         
-                model.customerId = id;
-            
+            VM_Create_Product model = new();
+            var categories = _readCategoryRepository.GetAll(false).ToList();
+            foreach (var category in categories)
+            {
+                VM_List_Category m = (VM_List_Category)category;
+                model.categories.Add(m);
+            }
             return View(model);
         }
         
         [HttpPost]
-        public async Task<IActionResult> CreateProduct(VM_ProductsLicence model)
+        public async Task<IActionResult> CreateProduct(VM_Create_Product model)
         {
-          //       Customer customer = await _readCustomerRepository.GetByIdAsync(model.customerId);
-          //  Product mproduct = TypeConversion.Conversion<VM_Create_Product, Product>(model.products);
-          //  //Licence licence = TypeConversion.Conversion<VM_Create_Licence,Licence>(model.licences);
-           
-          //  var b = Guid.Parse(model.licences.licenceKey);
-          //  Licence mlicence = new Licence
-          //  {
-          //      createdDate = DateTime.Now,
-          //      expiryDate = model.licences.expiryDate,
-          //      licenceKey = b,
-          //      product = mproduct
-          //  };
-          ////  mproduct.licences.Add(mlicence);
-            
-          //  mproduct.customer = customer;
-        
-          //  isOk =  await  _writeProductRepository.AddAsync(mproduct);
-       
-          //  await _writeProductRepository
-          //      .SaveAsync();
-          //  await _writeLicenceRepository.AddAsync(mlicence);
-          //  await _writeLicenceRepository.SaveAsync();
-            return View();
+
+            AlertMessage msg = new AlertMessage();
+            if (!ModelState.IsValid)
+            {
+
+                msg.message = "Product eklenemedi";
+                msg.alertType = "danger";
+
+
+                TempData["message"] = JsonConvert.SerializeObject(msg);
+                return RedirectToAction("ListProduct");
+            }
+            Product product = (Product)model;
+            isOk =await _writeProductRepository.AddAsync(product);
+            await _writeProductRepository.SaveAsync();
+            if (!isOk)
+            {
+
+                msg.message = $"{model.productName}  eklenemedi";
+                msg.alertType = "danger";
+
+                TempData["message"] = JsonConvert.SerializeObject(msg);
+                return RedirectToAction("ListProduct");
+            }
+            msg.message = $"{model.productName}  eklendi";
+            msg.alertType = "success";
+
+
+            TempData["message"] = JsonConvert.SerializeObject(msg);
+            return RedirectToAction("ListProduct");
         }
-        public async Task<IActionResult> ListProduct()
+        public ActionResult ListProduct()
         {
-
-            //var products = _readProductRepository.GetAll().ToList();
-            //List<VM_List_Product> models = new();
-            //if(products != null && products.Count > 0)
-            //{
-            //   foreach(var product in products)
-            //    {
-            //        VM_List_Product model = new VM_List_Product();
-            //        Customer customer = await _readCustomerRepository.GetByIdAsync(product.customerID);
-            //        VM_List_Customer mCustomer = new VM_List_Customer();
-            //        model.ID =  product.ID;
-            //        model.name= product.name;
-            //        model.description= product.description;
-                   
-            //        if(customer != null)
-            //        {
-            //           mCustomer.ID = customer.ID;
-            //            mCustomer.lastName = customer.lastName;
-            //            mCustomer.firstName = customer.firstName;
-            //            model.customer = mCustomer;
-            //        }
-            //        Licence licence = await _readLicenceRepository.GetSingleAsync(l => l.productID == product.ID);
-            //        VM_List_Licence mLicence = new();
-            //        if(licence != null)
-            //        {
-            //            mLicence.ID= licence.ID;
-            //            mLicence.licenceKey = licence.licenceKey;
-            //            model.licence = mLicence;
-            //        }
-            //        models.Add(model);
-            //    }
-
-            //}
-            return View();
+            var products=_readProductRepository.GetWhere(p=> p.active==true,false).Include(c=>c.category).ToList();
+            List<VM_List_Product> models = new();
+            foreach (var product in products)
+            {
+                VM_List_Product m = (VM_List_Product)product;
+                models.Add(m);
+            }
+            return View(models);
         }
         public async Task<IActionResult> ProductDetails(int id)
         {
-            //Product product  = await _readProductRepository.GetByIdAsync(id);
-            //VM_List_Product model = new();
-            //VM_List_Customer mCustomer = new();
-            //VM_List_Licence mLicence = new();
-            //if(product != null)
-            //{
-            //    Customer customer = await _readCustomerRepository.GetByIdAsync(product.customerID);
-            //    Licence licence =await _readLicenceRepository.GetSingleAsync(l => l.productID == product.ID);
-            //    if(licence != null)
-            //    {
-            //        mLicence.licenceKey = licence.licenceKey;
-            //        mLicence.ID = licence.ID;
-            //        mLicence.expiryDate = licence.expiryDate;
-            //        mLicence.createdDate = licence.createdDate;
-
-            //    }
-            //    mCustomer.ID = customer.ID;
-            //    mCustomer.lastName = customer.lastName;
-            //    mCustomer.firstName = customer.firstName;
-            //    model.ID = product.ID;
-            //    model.name = product.name;
-            //    model.description = product.description;
-            //    model.createdDate = product.createdDate;
-            //    model.licence = mLicence;
-            //    model.customer = mCustomer;
-                
-            //}  
-            return View();
+            var product = await _readProductRepository.GetByIdProductAsync(id);
+            var categories = _readCategoryRepository.GetAll(false).ToList();
+            VM_List_Product model = (VM_List_Product)product;
+            foreach (var category in categories)
+            {
+                VM_List_Category m = (VM_List_Category)category;
+                model.categories.Add(m);
+            }
+            return View(model);
         }
-        public IActionResult ProductUpdate(VM_List_Product model)
+        public async Task<IActionResult> ProductUpdate(VM_List_Product model)
         {
-           
-            //Product product = TypeConversion.Conversion<VM_List_Product,Product>(model);
-            //Licence licence = TypeConversion.Conversion<VM_List_Licence, Licence>(model.licence);
+            var category = await _readCategoryRepository.GetByIdAsync(model.categoryId);
+            model.categoryName = category.categoryName;
+            Product product = (Product)model;
+            isOk = _writeProductRepository.UpdateProduct(product);
+            await  _writeProductRepository.SaveAsync();
+            AlertMessage msg = new AlertMessage();
+            msg.message = isOk ? "Kayıt başarıyla güncelendi" : "Kayıt güncelenemedi";
+            msg.alertType = isOk ? "success" : "danger";
+            TempData["message"] = JsonConvert.SerializeObject(msg);
             return RedirectToAction("ListProduct");
         }
         public IActionResult ProductDelete()
         {
-            return RedirectToAction("ProductDetails");
+            return RedirectToAction("ListProduct");
         }
-      
- 
+
+        public async Task<IActionResult> CreateCategory(VM_Create_Product model)
+        {
+            if (model.categoryName != null)
+            {
+                Category category = new Category
+                {
+                    categoryName = model.categoryName,
+                };
+                isOk = await _writeCategoryRepository.AddAsync(category);
+                await _writeCategoryRepository.SaveAsync();
+            }
+            AlertMessage msg = new AlertMessage();
+            msg.message = isOk ? "Kategori başarıyla eklendi" : "Kategori eklenemedi";
+            msg.alertType = isOk ? "success" : "danger";
+            TempData["message"] = JsonConvert.SerializeObject(msg);
+
+            return RedirectToAction("CreateProduct");
+        }
     }
 }

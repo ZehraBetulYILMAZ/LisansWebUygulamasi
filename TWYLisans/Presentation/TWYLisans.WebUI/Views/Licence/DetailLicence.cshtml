@@ -1,0 +1,132 @@
+﻿@model VM_List_Licence
+<div class="row">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8 ">
+    <main role="main" class="pb-3">
+        <div class="container border rounded-1   w-100 mh-100 MyContainer" style="height: 36rem; margin-top:20px;">
+                <div class="row " style="margin-top:40px;">
+                @if (Model != null)
+                {
+                    <form class="d-flex justify-content-center" asp-controller="Licence" asp-action="UpdateLicence" method="post">
+                        <div class="row w-100 ">
+                            <!--satır başlangıcı -->
+                            <p class="myP">Lisans Anahtarı:</p>
+                            <div class="col-5">
+                                <h6>@Model.licenceKey</h6>
+                            </div>
+                            <div class="col-4">
+                                <div class="row text-start">
+                                    <div class="col-md-2">
+                                        <a data-toggle="collapse" class="myA" href="#collapse0">
+                                            <i class="indicator fa fa-pencil-square-o" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div id="collapse0" class="panel-collapse collapse in">
+                                            <span class="text">
+                                                <label>
+                                                    <input type="text" asp-for="licenceKey">
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--satır başlangıcı -->
+                            <p class="myP">Oluşturulma Tarihi :</p>
+                            <div class="col-5">
+                                    <h6>@Model.creationDate.ToString("yyyy-MM-dd")</h6>
+                            </div>
+                            <div class="col-6">
+                                <div class="row text-start">
+                                    <div class="col-md-2">
+                                        <a data-toggle="collapse" class="myA" href="#collapse1">
+                                            <i class="indicator fa fa-pencil-square-o" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div id="collapse1" class="panel-collapse collapse in">
+                                            <span class="text">
+                                                <label>
+                                                  <input type="date" asp-for="creationDate">
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <!--satır başlangıcı -->
+                                <p class="myP">Oluşturulma Tarihi :</p>
+                                <div class="col-5">
+                                    <h6>@Model.endingDate.ToString("yyyy-MM-dd")</h6>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row text-start">
+                                        <div class="col-md-2">
+                                            <a data-toggle="collapse" class="myA" href="#collapse2">
+                                                <i class="indicator fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div id="collapse2" class="panel-collapse collapse in">
+                                                <span class="text">
+                                                    <label>
+                                                        <input type="date" asp-for="endingDate">
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!--satır başlangıcı -->
+                            <p class="myP">Müşteri:</p>
+                            <div class="col-5">
+                                <h6>@Model.companyName</h6>
+                            </div>
+                            <div class="col-4">
+                                <a asp-controller="Customer" asp-action="DetailCustomer"  asp-route-id="@Model.customerId" class="btn btn-secondary btn-sm">Detay</a>
+                            </div>
+                              
+                            <!--satır başlangıcı -->
+                            <p class="myP">Ürün Adı</p>
+
+                            <div class="col-5">
+
+                                        <h6>@Model.productName</h6>
+
+
+                            </div>
+                            <div class="col-4">
+                                <a asp-controller="Product" asp-action="ProductDetails" asp-route-id="@Model.productId" class="btn btn-secondary btn-sm">Detay</a>
+                            </div>
+                                <input type="hidden" asp-for="@Model.customerId">
+                                <input type="hidden" asp-for="@Model.productId">
+                                <input type="hidden" asp-for="@Model.ID">
+                            <button type="submit" class="btn btn-dark m-2 w-100">Güncelle</button>
+
+                        </div>
+                    </form>
+                }
+                    <div class="justify-content-center d-flex">
+                        <div class="card w-75">
+                            <div class="m-3 text-center">
+                                <div>
+                                    <p class="myP text-center">Lisans Anahtarı Oluştur </p>
+                                </div>
+                                <div>
+                                    <button onclick="myFunction()" type="button" class="btn btn-outline-dark">Oluştur</button>
+                                </div>
+                                <div>
+                                    <p id="myGuid">AAAAA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+  <div class="col-md-2"></div>
+</div>

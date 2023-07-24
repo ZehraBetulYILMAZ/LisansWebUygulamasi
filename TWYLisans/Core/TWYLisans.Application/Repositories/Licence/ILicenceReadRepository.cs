@@ -8,6 +8,8 @@ using TWYLisans.Domain.Entities;
 namespace TWYLisans.Application.Repositories
 {
     public interface ILicenceReadRepository : IReadRepository<Licence>
-    {
+    { 
+        Task<Licence> GetByIdLicenceAsync(int id);
     }
 }
+

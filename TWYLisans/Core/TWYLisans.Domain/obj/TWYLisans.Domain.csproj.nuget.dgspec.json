@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ayşe kilimci\\OneDrive\\Belgeler\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Core\\TWYLisans.Domain\\TWYLisans.Domain.csproj": {}
+    "C:\\Users\\redli\\Documents\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Core\\TWYLisans.Domain\\TWYLisans.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ayşe kilimci\\OneDrive\\Belgeler\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Core\\TWYLisans.Domain\\TWYLisans.Domain.csproj": {
+    "C:\\Users\\redli\\Documents\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Core\\TWYLisans.Domain\\TWYLisans.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ayşe kilimci\\OneDrive\\Belgeler\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Core\\TWYLisans.Domain\\TWYLisans.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\redli\\Documents\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Core\\TWYLisans.Domain\\TWYLisans.Domain.csproj",
         "projectName": "TWYLisans.Domain",
-        "projectPath": "C:\\Users\\Ayşe kilimci\\OneDrive\\Belgeler\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Core\\TWYLisans.Domain\\TWYLisans.Domain.csproj",
-        "packagesPath": "C:\\Users\\Ayşe kilimci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ayşe kilimci\\OneDrive\\Belgeler\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Core\\TWYLisans.Domain\\obj\\",
+        "projectPath": "C:\\Users\\redli\\Documents\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Core\\TWYLisans.Domain\\TWYLisans.Domain.csproj",
+        "packagesPath": "C:\\Users\\redli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\redli\\Documents\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Core\\TWYLisans.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ayşe kilimci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\redli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

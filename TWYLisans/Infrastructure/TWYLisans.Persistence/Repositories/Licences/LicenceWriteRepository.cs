@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +15,24 @@ namespace TWYLisans.Persistence.Repositories.Licences
     {
         public LicenceWriteRepository(TWYLisansDbContext context) : base(context)
         {
+        }
+
+        public bool RemoveLicence(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool UpdateLicence (Licence entity)
+        {
+            var licence = Table.Find(entity.ID);
+            if (licence != null)
+            {
+                licence.licencekey = entity.licencekey;
+                licence.endingDate = entity.endingDate;
+                EntityEntry<Licence> entry = Table.Update(licence);
+                return entry.State == EntityState.Modified;
+            }
+            return false;
         }
     }
 }

@@ -8139,19 +8139,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ayşe kilimci\\.nuget\\packages\\": {}
+    "C:\\Users\\redli\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ayşe kilimci\\OneDrive\\Belgeler\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Presentation\\TWYLisans.WebUI\\TWYLisans.WebUI.csproj",
+      "projectUniqueName": "C:\\Users\\redli\\Documents\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Presentation\\TWYLisans.WebUI\\TWYLisans.WebUI.csproj",
       "projectName": "TWYLisans.WebUI",
-      "projectPath": "C:\\Users\\Ayşe kilimci\\OneDrive\\Belgeler\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Presentation\\TWYLisans.WebUI\\TWYLisans.WebUI.csproj",
-      "packagesPath": "C:\\Users\\Ayşe kilimci\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ayşe kilimci\\OneDrive\\Belgeler\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Presentation\\TWYLisans.WebUI\\obj\\",
+      "projectPath": "C:\\Users\\redli\\Documents\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Presentation\\TWYLisans.WebUI\\TWYLisans.WebUI.csproj",
+      "packagesPath": "C:\\Users\\redli\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\redli\\Documents\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Presentation\\TWYLisans.WebUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ayşe kilimci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\redli\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8159,20 +8159,21 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Ayşe kilimci\\OneDrive\\Belgeler\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Core\\TWYLisans.Application\\TWYLisans.Application.csproj": {
-              "projectPath": "C:\\Users\\Ayşe kilimci\\OneDrive\\Belgeler\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Core\\TWYLisans.Application\\TWYLisans.Application.csproj"
+            "C:\\Users\\redli\\Documents\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Core\\TWYLisans.Application\\TWYLisans.Application.csproj": {
+              "projectPath": "C:\\Users\\redli\\Documents\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Core\\TWYLisans.Application\\TWYLisans.Application.csproj"
             },
-            "C:\\Users\\Ayşe kilimci\\OneDrive\\Belgeler\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Infrastructure\\TWYLisans.Infrastructure\\TWYLisans.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Ayşe kilimci\\OneDrive\\Belgeler\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Infrastructure\\TWYLisans.Infrastructure\\TWYLisans.Infrastructure.csproj"
+            "C:\\Users\\redli\\Documents\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Infrastructure\\TWYLisans.Infrastructure\\TWYLisans.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\redli\\Documents\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Infrastructure\\TWYLisans.Infrastructure\\TWYLisans.Infrastructure.csproj"
             },
-            "C:\\Users\\Ayşe kilimci\\OneDrive\\Belgeler\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Infrastructure\\TWYLisans.Persistence\\TWYLisans.Persistence.csproj": {
-              "projectPath": "C:\\Users\\Ayşe kilimci\\OneDrive\\Belgeler\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Infrastructure\\TWYLisans.Persistence\\TWYLisans.Persistence.csproj"
+            "C:\\Users\\redli\\Documents\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Infrastructure\\TWYLisans.Persistence\\TWYLisans.Persistence.csproj": {
+              "projectPath": "C:\\Users\\redli\\Documents\\GitHub\\LisansWebUygulamasi\\TWYLisans\\Infrastructure\\TWYLisans.Persistence\\TWYLisans.Persistence.csproj"
             }
           }
         }
@@ -8235,7 +8236,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   },

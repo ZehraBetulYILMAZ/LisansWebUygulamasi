@@ -18,5 +18,12 @@ namespace TWYLisans.Persistence.Repositories
         
         }
 
+        public async Task<Product> GetByIdProductAsync(int id)
+        {
+            return await Table
+               .Include(e => e.category)
+               .FirstOrDefaultAsync(c => c.ID == id);
+        }
+      
     }
 }

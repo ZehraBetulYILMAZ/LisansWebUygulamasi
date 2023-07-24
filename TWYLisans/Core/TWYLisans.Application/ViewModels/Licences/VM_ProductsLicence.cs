@@ -9,8 +9,7 @@ namespace TWYLisans.Application.ViewModels.Licences
 {
     public class VM_ProductsLicence
     {
-        public int customerId { get; set; }
-        public VM_Create_Licence licences { get; set; }
-        public VM_Create_Product products { get; set; }
+       public VM_Create_Licence licences { get; set; } = new VM_Create_Licence();
+        public List<VM_List_Product> products { get; set; } = new List<VM_List_Product>();
     }
 }

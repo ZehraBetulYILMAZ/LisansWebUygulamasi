@@ -24,6 +24,8 @@ namespace TWYLisans.Persistence
             service.AddScoped<IReadCustomerRepository, CustomerReadRepository>();
             service.AddScoped<ILicenceWriteRepository, LicenceWriteRepository>();
             service.AddScoped<ILicenceReadRepository, LicenceReadRepository>();
+            service.AddScoped<ICategoryWriteRepository, CategoryWriteRepository>();
+            service.AddScoped<ICategoryReadRepository, CategoryReadRepository>();
         }
     }
 }

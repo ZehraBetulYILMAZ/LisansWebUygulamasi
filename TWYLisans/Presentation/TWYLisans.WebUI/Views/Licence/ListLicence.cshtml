@@ -1,0 +1,45 @@
+﻿@model List<VM_List_Licence>
+<div class="row">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8">
+        <main role="main" class="pb-3">
+
+            <div class="container border rounded-1 p-2 m-4 w-100 mh-100 MyContainer" style="height: 35rem;">
+                <div class="container  DivWithScroll">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Lisans Anahtarı</th>
+                                <th scope="col">Oluşturma Zamanı</th>
+                                <th scope="col">Kullanım dolum Zamanı</th>
+                                <th scope="col">Aksiyon</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null)
+                            {
+                                foreach (var licence in @Model)
+                                {
+                                    <tr>
+                                        <td>@licence.licenceKey</td>
+                                        <td>@licence.creationDate.ToString("yyyy-MM-dd")</td>
+                                        <td>@licence.endingDate.ToString("yyyy-MM-dd")</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                <a asp-controller="Licence" asp-action="DetailLicence" asp-route-id="@licence.ID" class="btn BtnDuzenle btn-sm">Düzenle</a>
+                                                <a asp-controller="Licence" asp-action="index" class="btn BtnSil btn-sm">Sil</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="col-md-2"></div>
+</div>

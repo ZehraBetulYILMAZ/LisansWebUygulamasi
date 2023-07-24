@@ -9,5 +9,7 @@ namespace TWYLisans.Application.Repositories
 {
     public interface IWriteCustomerRepository:IWriteRepository<Customer>
     {
+        bool RemoveCustomer(int id);
+        bool UpdateCustomer(Customer nCustomer);
     }
 }

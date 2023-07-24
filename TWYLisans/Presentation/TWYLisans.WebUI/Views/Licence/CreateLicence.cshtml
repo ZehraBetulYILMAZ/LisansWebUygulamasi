@@ -1,0 +1,62 @@
+﻿@model VM_ProductsLicence 
+
+<div class="row justify-content-center d-flex">
+    <div class="col-lg-4">
+        <div class="container m-4" >
+            <div class="card w-75">
+                <div class="m-3 text-center">
+                    <div>
+                        <p class="myP text-center">Lisans Anahtarı Oluştur </p>
+                    </div>
+                    <div>
+                        <button onclick="myFunction()" type="button" class="btn btn-outline-dark">Oluştur</button>
+                    </div>
+                    <div>
+                        <p id="myGuid">AAAAA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <main role="main" class="pb-3 m-3">
+            <div class="container  border MyContainer rounded-1 p-2 m-4 w-75 " style="height: 30rem; margin-top:40px;">
+                <div class="container w-75 " style="margin-top:50px;">
+                    <div asp-validation-summary="All"></div>
+                    <form asp-action="CreateLicence" asp-controller="Licence" method="post" >
+                        <div class="form-group m-2">
+                            <label for="exampleInputLicenceKey">Lisans Anahtarı : </label>
+                            <input type="text" class="form-control" asp-for="@Model.licences.licencekey" id="exampleInputLicenceKey" placeholder="Enter Licence Key">
+                            @*<span class="text-danger" asp-validation-for="@Model.products.name"></span>*@
+                        </div>
+                        <div class="form-group m-2">
+                            <label for="exampleInputExpiryDate">Kullanım Dolum Zamanı : </label>
+                            <input type="date" class="form-control" asp-for="@Model.licences.endingDate" id="exampleInputExpiryDate" placeholder="Enter Licence Key">
+                            @*<span class="text-danger" asp-validation-for="@Model.products.name"></span>*@
+                        </div>
+                        @if (Model.products!=null && Model.products.Count > 0 )
+                        {
+                            <select class="form-select" asp-for="@Model.licences.productId" aria-label="Default select example">
+                                <option selected>Ürün Seçiniz</option>
+                                @foreach(var product in Model.products){
+                                <option value="@product.ID">@product.productName</option>
+                                }
+                            </select>
+                        }
+                        else
+                        {
+                            <select class="form-select" aria-label="Disabled select example" disabled>
+                                <option selected>Please add product</option>
+                            </select>
+                        }
+                        <input type="hidden" asp-for="@Model.licences.customerId" />
+                        <div class="justify-content-center d-flex">
+                            <button type="submit" style="background-color:#474745; color:#ffffff" class="btn w-100 m-2">Kaydet</button>
+                         </div>                   
+                    </form>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

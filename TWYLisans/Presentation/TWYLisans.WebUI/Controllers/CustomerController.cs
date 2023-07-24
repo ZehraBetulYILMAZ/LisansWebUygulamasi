@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using TWYLisans.Application.Repositories;
 using TWYLisans.Application.ViewModels.Customers;
-using TWYLisans.Application.ViewModels.Products;
+using TWYLisans.Application.ViewModels.Licences;
 using TWYLisans.Domain.Entities;
-using TWYLisans.Infrastructure;
+using TWYLisans.WebUI.Models;
 
 namespace TWYLisans.WebUI.Controllers
 {
@@ -11,31 +13,15 @@ namespace TWYLisans.WebUI.Controllers
     {
         private readonly IReadCustomerRepository _readCustomerRepository;
         private readonly IWriteCustomerRepository _writeCustomerRepository;
-        private readonly IProductReadRepository _readProductRepository;
         bool isOk = false;
         public CustomerController(IReadCustomerRepository readCustomerRepository, IWriteCustomerRepository writeCustomerRepository , IProductReadRepository productReadRepository)
         {
 
             _readCustomerRepository = readCustomerRepository;
             _writeCustomerRepository = writeCustomerRepository;
-            _readProductRepository = productReadRepository;
         }
         public IActionResult Index()
         {
-            //Customer customer = new Customer()
-            //{
-            //    firstName = FakeData.NameData.GetFirstName(),
-            //    lastName = FakeData.NameData.GetSurname(),
-            //    ePosta = FakeData.NetworkData.GetEmail(),
-            //    city = FakeData.PlaceData.GetCity(),
-            //    town = FakeData.PlaceData.GetStreetName(),
-            //    phoneNumber = FakeData.PhoneNumberData.GetPhoneNumber(),
-            //    gender = FakeData.BooleanData.GetBoolean(),
-            //    createdDate = DateTime.UtcNow
-            //};
-           
-            //_writeCustomerRepository.AddAsync(customer);
-            ////_writeCustomerRepository.SaveAsync();
             return View();
         }
 
@@ -46,96 +32,113 @@ namespace TWYLisans.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCustomer(VM_Create_Customer model)
         {
-            //var customer = TypeConversion.Conversion<VM_Create_Customer, Customer>(model);
-            //customer.createdDate = DateTime.Now;
-            //isOk = await _writeCustomerRepository.AddAsync(customer);
-            //await _writeCustomerRepository.SaveAsync();
+            AlertMessage msg = new AlertMessage();
+            if (!ModelState.IsValid)
+            {
+
+                msg.message = "Müşteri eklenemedi";
+                msg.alertType = "danger";
+
+
+                TempData["message"] = JsonConvert.SerializeObject(msg);
+                return View();
+            }
+            var customer = (Customer)model;
+            isOk = await _writeCustomerRepository.AddAsync(customer);
+            await _writeCustomerRepository.SaveAsync();
+            if (!isOk)
+            {
+
+                msg.message = $"{model.companyName}  eklenemedi";
+                msg.alertType = "danger";
+
+                TempData["message"] = JsonConvert.SerializeObject(msg);
+                return View();
+            }
+            msg.message = $"{model.companyName}  eklendi";
+                msg.alertType = "success";
+
+         
+            TempData["message"] = JsonConvert.SerializeObject(msg);
             return View();
         }
-
         public IActionResult ListCustomers()
-        {//  var customers = _readCustomerRepository.GetAll(false).ToList();
-        //   List<VM_List_Customer> models = new List<VM_List_Customer>();
-        //   foreach (var customer in customers)
-        //    {
-        //        var model = new VM_List_Customer
-        //        {
-        //            createdDate = customer.createdDate,
-        //            firstName = customer.firstName,
-        //            lastName = customer.lastName,
-        //            phoneNumber = customer.phoneNumber,
-        //            city = customer.city,
-        //            town = customer.town,
-        //            ID = customer.ID,
-        //            ePosta = customer.ePosta,
-        //            gender = customer.gender,
-        //        };
-        //        models.Add(model);
-        //    }
-             return View();
+        {
+            AlertMessage msg = new AlertMessage();
+            var customers = _readCustomerRepository.GetWhere(c => c.active == true, false).Include(e => e.town).Include(c => c.town.city).ToList();
+            if (customers == null || customers.Count<0)
+            {
+                msg.message = "Müşteriler Bulunamadı";
+                msg.alertType = "danger";
+                TempData["message"] = JsonConvert.SerializeObject(msg);
+                return View("NoModel");
+            }
+            List<VM_List_Customer> models = new List<VM_List_Customer>();
+            foreach (var customer in customers)
+            {
+                VM_List_Customer m = (VM_List_Customer)customer;
+                models.Add(m);
+            }
+            return View(models);
         }
         [HttpPost]
         public async Task<IActionResult> UpdateCustomer(VM_Details_Customer model)
         {
-            //var customer = await _readCustomerRepository.GetByIdAsync(model.customer.ID);
             if (model.customer != null)
             {
-               var customer = TypeConversion.Conversion<VM_List_Customer, Customer>(model.customer);
-                isOk = _writeCustomerRepository.Update(customer);
-               await _writeCustomerRepository.SaveAsync();
+                var customer = (Customer)model.customer;
+               
+                isOk = _writeCustomerRepository.UpdateCustomer(customer);
+                await _writeCustomerRepository.SaveAsync();
             }
-           
-
+            AlertMessage msg = new AlertMessage();
+            msg.message = isOk ? "Kayıt başarıyla güncelendi" : "Kayıt güncelenemedi"; 
+            msg.alertType = isOk ? "success" : "danger";
+            TempData["message"] = JsonConvert.SerializeObject(msg);
             return RedirectToAction("ListCustomers");
 
         }
 
         public async Task<IActionResult> DetailCustomer(int id)
-       {
+       { 
+            AlertMessage msg = new AlertMessage();
             Customer customer = await _readCustomerRepository.GetByIdCustomerAsync(id);
-            
-
-            
-            VM_List_Customer mCustomer = new VM_List_Customer
+            if(customer == null) {
+                 msg.message = "Müşteri Bulunamadı";
+                 msg.alertType = "danger";
+                TempData["message"] = JsonConvert.SerializeObject(msg);
+                return RedirectToAction("ListCustomers");
+            }
+            VM_List_Customer mCustomer = (VM_List_Customer)customer;
+            List<VM_List_Licence> mLicence= new();
+            if (customer.licences.Count > 0)
             {
-               
-                companyName = customer.companyName,
-               
-                phoneNumber = customer.phoneNumber,
-                cityname = customer.town.city.cityname,
-                townname = customer.town.townname,
-                ID = customer.ID,
-                ePosta = customer.ePosta,
-               
-            };
-            //List<VM_List_Licence> mProducts = new();
-            //if (products.Count > 0)
-            //{
-            //    foreach (var product in products)
-            //    {
+                    foreach (var licence in customer.licences)
+                    {
+                       VM_List_Licence m = (VM_List_Licence)licence;
+                        mLicence.Add(m);
+                    }
+            }
 
-            //        VM_List_Product m = new VM_List_Product
-            //        {
-            //            createdDate = product.createdDate,
-            //            ID = product.ID,
-            //            name = product.name,
-            //            description = product.description
-            //        };
-            //        mProducts.Add(m);
-            //    }
-            //}
             VM_Details_Customer model = new VM_Details_Customer()
             {
                 customer = mCustomer,
-                
+                licence = mLicence
             };
             return View(model);
         }
         
         public async Task<IActionResult> DeleteCustomer(int id)
         {
-        //    isOk= await _writeCustomerRepository.RemoveAsync(id);
-        //    await _writeCustomerRepository.SaveAsync();
+            isOk=  _writeCustomerRepository.RemoveCustomer(id);
+            await _writeCustomerRepository.SaveAsync();
+            
+            AlertMessage msg = new AlertMessage();
+            msg.message = isOk ? "Kayıt başarıyla silindi" : "Kayıt Silinemedi";
+            msg.alertType = isOk ? "success" : "danger";
+            TempData["message"] = JsonConvert.SerializeObject(msg);
+
+            
             return RedirectToAction("ListCustomers");
         }
 
