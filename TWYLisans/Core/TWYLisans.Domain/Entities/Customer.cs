@@ -14,7 +14,6 @@ namespace TWYLisans.Domain.Entities
         public string? ePosta { get; set; }
         public string? phoneNumber { get; set; }
         public int townId { get; set; }
-        public byte[] mailaddress { get; set; }
 
         [DefaultValue(true)]
         public bool active { get; set; }

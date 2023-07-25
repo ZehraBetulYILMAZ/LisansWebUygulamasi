@@ -48,7 +48,6 @@ namespace TWYLisans.Persistence.Repositories
                 context.Set<Town>().Remove(entity.town);
                 context.Set<City>().Remove(entity.town.city);
                 entity.town = nCustomer.town;
-                entity.mailaddress = nCustomer.mailaddress;
                 entity.active=true;
 
                 EntityEntry<Customer> entry = Table.Update(entity);

@@ -98,10 +98,6 @@ namespace TWYLisans.Persistence.Migrations
                     b.Property<string>("ePosta")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte[]>("mailaddress")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
                     b.Property<string>("phoneNumber")
                         .HasColumnType("nvarchar(max)");
 
@@ -121,7 +117,6 @@ namespace TWYLisans.Persistence.Migrations
                             active = true,
                             companyName = "A şirketi",
                             ePosta = "aaa@aaa.aaa",
-                            mailaddress = new byte[] { 109, 97, 105, 108, 97, 100, 114, 101, 115, 115, 49 },
                             phoneNumber = "00220202101",
                             townId = 1
                         },
@@ -131,7 +126,6 @@ namespace TWYLisans.Persistence.Migrations
                             active = true,
                             companyName = "B şirketi",
                             ePosta = "bbb@bbb.bbb",
-                            mailaddress = new byte[] { 109, 97, 105, 108, 97, 100, 114, 101, 115, 115, 50 },
                             phoneNumber = "22202020202",
                             townId = 2
                         },
@@ -141,7 +135,6 @@ namespace TWYLisans.Persistence.Migrations
                             active = true,
                             companyName = "C şirketi",
                             ePosta = "ccc@ccc.ccc",
-                            mailaddress = new byte[] { 109, 97, 105, 108, 97, 100, 114, 101, 115, 115, 51 },
                             phoneNumber = "30303030303",
                             townId = 3
                         });
@@ -186,40 +179,40 @@ namespace TWYLisans.Persistence.Migrations
                         {
                             ID = 1,
                             active = true,
-                            creationDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3316),
+                            creationDate = new DateTime(2023, 7, 25, 17, 31, 36, 685, DateTimeKind.Local).AddTicks(3971),
                             customerId = 1,
-                            endingDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3328),
-                            licencekey = new Guid("8b6797d6-dddf-4acc-8478-f6078996cb6d"),
+                            endingDate = new DateTime(2023, 7, 25, 17, 31, 36, 685, DateTimeKind.Local).AddTicks(3983),
+                            licencekey = new Guid("5c8ad19b-e355-49f5-bfa8-e215ced42baa"),
                             productId = 1
                         },
                         new
                         {
                             ID = 2,
                             active = true,
-                            creationDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3331),
+                            creationDate = new DateTime(2023, 7, 25, 17, 31, 36, 685, DateTimeKind.Local).AddTicks(3985),
                             customerId = 2,
-                            endingDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3332),
-                            licencekey = new Guid("378ccfc5-a090-4fb1-b74d-6dbeb9446ab4"),
+                            endingDate = new DateTime(2023, 7, 25, 17, 31, 36, 685, DateTimeKind.Local).AddTicks(3986),
+                            licencekey = new Guid("21f4935e-8ffa-47dd-8ed8-45d19c746456"),
                             productId = 2
                         },
                         new
                         {
                             ID = 3,
                             active = true,
-                            creationDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3333),
+                            creationDate = new DateTime(2023, 7, 25, 17, 31, 36, 685, DateTimeKind.Local).AddTicks(3987),
                             customerId = 2,
-                            endingDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3334),
-                            licencekey = new Guid("31686c71-dc82-4361-8c2e-ce5a3afe7206"),
+                            endingDate = new DateTime(2023, 7, 25, 17, 31, 36, 685, DateTimeKind.Local).AddTicks(3988),
+                            licencekey = new Guid("ffe1b770-2303-4bc2-b233-3cea214024b5"),
                             productId = 1
                         },
                         new
                         {
                             ID = 4,
                             active = true,
-                            creationDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3335),
+                            creationDate = new DateTime(2023, 7, 25, 17, 31, 36, 685, DateTimeKind.Local).AddTicks(3989),
                             customerId = 3,
-                            endingDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3335),
-                            licencekey = new Guid("484feabb-6c8c-424c-a2c3-8a3162fce583"),
+                            endingDate = new DateTime(2023, 7, 25, 17, 31, 36, 685, DateTimeKind.Local).AddTicks(3990),
+                            licencekey = new Guid("60b88584-a01f-4c65-a327-c8fd259b0e60"),
                             productId = 2
                         });
                 });

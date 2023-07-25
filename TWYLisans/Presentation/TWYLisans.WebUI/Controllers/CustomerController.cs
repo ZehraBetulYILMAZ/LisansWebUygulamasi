@@ -49,13 +49,6 @@ namespace TWYLisans.WebUI.Controllers
                 return View();
             }
             var customer = (Customer)model;
-           
-                string mail = model.mailaddress;
-
-                // convert string to stream
-                byte[] byteArray = Encoding.ASCII.GetBytes(mail);
-                customer.mailaddress = byteArray;
-
             isOk = await _writeCustomerRepository.AddAsync(customer);
             await _writeCustomerRepository.SaveAsync();
             if (!isOk)
@@ -99,8 +92,6 @@ namespace TWYLisans.WebUI.Controllers
             if (model.customer != null)
             {
                 var customer = (Customer)model.customer;
-                byte[] byteArray = Encoding.ASCII.GetBytes(model.customer.mailaddress);
-                customer.mailaddress = byteArray;
                 isOk = _writeCustomerRepository.UpdateCustomer(customer);
                 await _writeCustomerRepository.SaveAsync();
             }
@@ -123,9 +114,6 @@ namespace TWYLisans.WebUI.Controllers
                 return RedirectToAction("ListCustomers");
             }
             VM_List_Customer mCustomer = (VM_List_Customer)customer;
-            MemoryStream stream = new MemoryStream(customer.mailaddress);
-            StreamReader reader = new StreamReader(stream);
-            mCustomer.mailaddress = reader.ReadToEnd();
             List<VM_List_Licence> mLicence= new();
             if (customer.licences.Count > 0)
             {

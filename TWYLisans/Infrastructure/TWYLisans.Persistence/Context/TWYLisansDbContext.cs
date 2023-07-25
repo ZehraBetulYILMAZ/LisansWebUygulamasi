@@ -36,9 +36,9 @@ namespace TWYLisans.Persistence.Context
                new Product { ID = 2, productName = "B Ürünü", active = true, productDescription = "B açıklaması", categoryId = 2 }
              );
             modelBuilder.Entity<Customer>().HasData(
-            new Customer { ID = 1, companyName = "A şirketi", active = true, ePosta="aaa@aaa.aaa", mailaddress = Encoding.ASCII.GetBytes("mailadress1"),phoneNumber="00220202101",townId=1 },
-             new Customer { ID = 2, companyName = "B şirketi", active = true, ePosta = "bbb@bbb.bbb", mailaddress = Encoding.ASCII.GetBytes("mailadress2"), phoneNumber = "22202020202", townId = 2 },
-             new Customer { ID = 3, companyName = "C şirketi", active = true, ePosta = "ccc@ccc.ccc", mailaddress = Encoding.ASCII.GetBytes("mailadress3"), phoneNumber = "30303030303", townId = 3 } 
+            new Customer { ID = 1, companyName = "A şirketi", active = true, ePosta="aaa@aaa.aaa",phoneNumber="00220202101",townId=1 },
+             new Customer { ID = 2, companyName = "B şirketi", active = true, ePosta = "bbb@bbb.bbb", phoneNumber = "22202020202", townId = 2 },
+             new Customer { ID = 3, companyName = "C şirketi", active = true, ePosta = "ccc@ccc.ccc", phoneNumber = "30303030303", townId = 3 } 
            );
             modelBuilder.Entity<Licence>().HasData(
             new Licence { ID = 1, licencekey = Guid.NewGuid(), active = true, creationDate = DateTime.Now, endingDate = DateTime.Now, customerId = 1, productId = 1 },
