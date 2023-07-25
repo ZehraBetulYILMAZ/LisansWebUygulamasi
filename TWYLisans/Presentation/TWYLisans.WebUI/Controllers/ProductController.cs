@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ClosedXML.Excel;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System.Data;
 using TWYLisans.Application.Repositories;
 using TWYLisans.Application.ViewModels.Customers;
 using TWYLisans.Application.ViewModels.Licences;
@@ -140,6 +142,38 @@ namespace TWYLisans.WebUI.Controllers
             TempData["message"] = JsonConvert.SerializeObject(msg);
 
             return RedirectToAction("CreateProduct");
+        }
+        public async Task<FileResult> ExportProductInExcel()
+        {
+            var products = _readProductRepository.GetWhere(p => p.active == true, false).Include(c => c.category).ToList();
+            var filename = "products.xlsx";
+            return GenaretExcel(filename, products);
+        }
+        private FileResult GenaretExcel(string filename, List<Product> products)
+        {
+            DataTable dataTable = new DataTable("Ürünler");
+            dataTable.Columns.AddRange(new DataColumn[]
+            {
+                new DataColumn("Id"),
+                new DataColumn("productName"),
+                new DataColumn("productDescription"),
+                new DataColumn("categoryName"),
+              
+            });
+            foreach (var product in products)
+            {
+                dataTable.Rows.Add(product.ID,product.productName,product.productDescription,product.category.categoryName);
+            }
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                wb.Worksheets.Add(dataTable);
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    wb.SaveAs(ms);
+                    return File(ms.ToArray(), "application/vnd.openxmlformats.officedocument.spreadsheetml.sheet",
+                        filename);
+                }
+            }
         }
     }
 }

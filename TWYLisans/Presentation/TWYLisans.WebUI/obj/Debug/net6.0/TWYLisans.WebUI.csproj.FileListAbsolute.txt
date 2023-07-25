@@ -355,3 +355,10 @@ C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLi
 C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLisans.WebUI\obj\Debug\net6.0\TWYLisans.WebUI.pdb
 C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLisans.WebUI\obj\Debug\net6.0\TWYLisans.WebUI.genruntimeconfig.cache
 C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLisans.WebUI\obj\Debug\net6.0\ref\TWYLisans.WebUI.dll
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLisans.WebUI\bin\Debug\net6.0\ClosedXML.dll
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLisans.WebUI\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLisans.WebUI\bin\Debug\net6.0\ExcelNumberFormat.dll
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLisans.WebUI\bin\Debug\net6.0\Irony.dll
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLisans.WebUI\bin\Debug\net6.0\SixLabors.Fonts.dll
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLisans.WebUI\bin\Debug\net6.0\System.IO.Packaging.dll
+C:\Users\redli\Documents\GitHub\LisansWebUygulamasi\TWYLisans\Presentation\TWYLisans.WebUI\bin\Debug\net6.0\XLParser.dll

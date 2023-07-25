@@ -11,7 +11,7 @@
                     <form class="row g-3 needs-validation m-2" asp-action="CreateCustomer" asp-controller="Customer" method="post" >
                         <div class="col-md-12">
                             <label for="validationCustom01" class="form-label">Şirket Adı</label>
-                            <input type="text" class="form-control" asp-for="companyName" id="validationCustom01" >
+                            <input type="text" class="form-control" asp-for="companyName" id="validationCustom01" required>
                             <span asp-validation-for="companyName" class="text-danger"></span>
                           
                         </div>
@@ -44,7 +44,7 @@
                         </div>
                         <div class="col-md-12">
                             <label for="validationCustom02" class="form-label">MailAddres</label>
-                            <input type="text" class="form-control" asp-for="mailaddress" id="validationCustom02" >
+                            <input type="text" class="form-control" asp-for="mailaddress" id="validationCustom02" required >
                             <span asp-validation-for="mailaddress" class="text-danger"></span>
                             <div class="invalid-feedback">
                                 Please provide a valid Town.

@@ -14,7 +14,7 @@ namespace TWYLisans.Application.ViewModels.Customers
         public string? ePosta { get; set; }
         public string? phoneNumber { get; set; }
         public string townname { get; set; }
-        public byte[]? mailaddress { get; set; }
+        public string mailaddress { get; set; }
         public string cityname { get; set; }
         public bool active { get; set; }
 
@@ -26,7 +26,6 @@ namespace TWYLisans.Application.ViewModels.Customers
                 ePosta = customer.ePosta,
                 phoneNumber = customer.phoneNumber,
                 townname = customer.town.townname,
-                mailaddress = customer.mailaddress,
                 companyName = customer.companyName,
                 active = customer.active,
                 ID = customer.ID
@@ -50,7 +49,7 @@ namespace TWYLisans.Application.ViewModels.Customers
                         cityname = model.cityname,
                     }
                 },
-                mailaddress = model.mailaddress
+              
             };
         }
 

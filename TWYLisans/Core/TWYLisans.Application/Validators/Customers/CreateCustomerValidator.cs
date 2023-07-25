@@ -13,16 +13,15 @@ namespace TWYLisans.Application.Validators.Customers
     {
         public CreateCustomerValidator()
         {
-            //RuleFor(c => c.firstName)
-            //    .NotEmpty().NotNull().WithMessage("İsim alanı boş geçilemez");
-            //RuleFor(c => c.lastName)
-            //    .NotEmpty().NotNull().WithMessage("Soyisim alanı boş geçilemez");
-            //RuleFor(c => c.ePosta)
-            //    .NotEmpty().NotNull().WithMessage("EPosta alanı boş geçilemez")
-            //    .EmailAddress();
-            //RuleFor(c => c.phoneNumber)
-            //    .NotEmpty().NotNull().WithMessage("Telefon No alanı boş geçilemez")
-            //    .Length(12);
+            RuleFor(c => c.companyName)
+               .NotEmpty().NotNull().WithMessage("İsim alanı boş geçilemez");
+            RuleFor(c => c.townname)
+               .NotEmpty().NotNull().WithMessage("İlçe alanı boş geçilemez");
+            RuleFor(c => c.cityname)
+                .NotEmpty().NotNull().WithMessage("Şehir alanı boş geçilemez");
+            RuleFor(c => c.phoneNumber)
+                .MaximumLength(20).WithMessage("Telefon No 20 karakteri geçemez");
+               
         } 
     }
 }

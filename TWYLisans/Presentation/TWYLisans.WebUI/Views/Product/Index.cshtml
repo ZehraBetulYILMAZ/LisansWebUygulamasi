@@ -8,8 +8,8 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body" style="margin:20px">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <h5 class="card-title">Ürünleri Listele</h5>
+                            <p class="card-text">Kayıtlı ürünlerin listesini görüntülemek için butona tıklayınız.</p>
                             <div class="rounded-2">
                                 <a asp-action="ListProduct" asp-controller="Product" class="btn btn-secondary">
                                     Ürünleri Listele
@@ -21,11 +21,12 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body" style=" margin:20px">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <h5 class="card-title">Ürün ekle</h5>
+                            <p class="card-text">Yeni ürün eklemek için butona tıklayınız.</p>
                             <div class="rounded-2">
-                                <a asp-action="CreateCustomer" asp-controller="Customer" class="btn bg-light">
-                                   Kategori Ekle
+                                
+                                <a asp-action="CreateProduct" asp-controller="Product" class="btn btn-dark">
+                                    Ürün Ekle
                                 </a>
                             </div>
                         </div>
@@ -34,11 +35,11 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body" style="margin:20px">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <h5 class="card-title">Ürün Excel Dosyası</h5>
+                            <p class="card-text">Kayıtl ürünlerin listesini excel dosyası olarak inidirip görüntülemek için butona tıklayınız.</p>
                             <div class="rounded-2">
-                                <a asp-action="CreateProduct" asp-controller="Product" class="btn btn-dark">
-                                    Ürün Ekle
+                                <a asp-action="ExportProductInExcel" asp-controller="Product" class="btn bg-light">
+                                    İndir
                                 </a>
                             </div>
                         </div>

@@ -1,6 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Spreadsheet;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System.Collections;
+using System.Data;
+using System.Text;
 using TWYLisans.Application.Repositories;
 using TWYLisans.Application.ViewModels.Customers;
 using TWYLisans.Application.ViewModels.Licences;
@@ -44,6 +49,13 @@ namespace TWYLisans.WebUI.Controllers
                 return View();
             }
             var customer = (Customer)model;
+           
+                string mail = model.mailaddress;
+
+                // convert string to stream
+                byte[] byteArray = Encoding.ASCII.GetBytes(mail);
+                customer.mailaddress = byteArray;
+
             isOk = await _writeCustomerRepository.AddAsync(customer);
             await _writeCustomerRepository.SaveAsync();
             if (!isOk)
@@ -87,7 +99,8 @@ namespace TWYLisans.WebUI.Controllers
             if (model.customer != null)
             {
                 var customer = (Customer)model.customer;
-               
+                byte[] byteArray = Encoding.ASCII.GetBytes(model.customer.mailaddress);
+                customer.mailaddress = byteArray;
                 isOk = _writeCustomerRepository.UpdateCustomer(customer);
                 await _writeCustomerRepository.SaveAsync();
             }
@@ -100,7 +113,7 @@ namespace TWYLisans.WebUI.Controllers
         }
 
         public async Task<IActionResult> DetailCustomer(int id)
-       { 
+        { 
             AlertMessage msg = new AlertMessage();
             Customer customer = await _readCustomerRepository.GetByIdCustomerAsync(id);
             if(customer == null) {
@@ -110,6 +123,9 @@ namespace TWYLisans.WebUI.Controllers
                 return RedirectToAction("ListCustomers");
             }
             VM_List_Customer mCustomer = (VM_List_Customer)customer;
+            //MemoryStream stream = new MemoryStream(customer.mailaddress);
+            //StreamReader reader = new StreamReader(stream);
+            //mCustomer.mailaddress = reader.ReadToEnd();
             List<VM_List_Licence> mLicence= new();
             if (customer.licences.Count > 0)
             {
@@ -141,6 +157,39 @@ namespace TWYLisans.WebUI.Controllers
             
             return RedirectToAction("ListCustomers");
         }
-
+        [HttpGet]
+        public async Task<FileResult> ExportCustomersInExcel()
+        {
+            var customers = _readCustomerRepository.GetWhere(c => c.active == true, false).Include(e => e.town).Include(c => c.town.city).ToList();
+            var filename = "customers.xlsx";
+            return GenaretExcel(filename, customers);
+        }
+        private FileResult GenaretExcel(string filename , List<Customer> customers)
+        {
+            DataTable dataTable = new DataTable("Müşteriler");
+            dataTable.Columns.AddRange(new DataColumn[]
+            {
+                new DataColumn("Id"),
+                new DataColumn("companyName"),
+                new DataColumn("ePosta"),
+                new DataColumn("phoneNumber"),
+                new DataColumn("townname"),
+                new DataColumn("cityname"),
+            });
+            foreach (var customer in customers)
+            {
+                dataTable.Rows.Add(customer.ID,customer.companyName, customer.ePosta,customer.phoneNumber,customer.town.townname,customer.town.city.cityname);
+            }
+            using(XLWorkbook wb = new XLWorkbook())
+            {
+                wb.Worksheets.Add(dataTable);
+                using(MemoryStream ms = new MemoryStream())
+                {
+                    wb.SaveAs(ms);
+                    return File(ms.ToArray(),"application/vnd.openxmlformats.officedocument.spreadsheetml.sheet",
+                        filename);
+                }
+            }
+        }
     }
 }
