@@ -37,6 +37,18 @@ namespace TWYLisans.Persistence.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            categoryName = "A kategorisi"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            categoryName = "B kategorisi"
+                        });
                 });
 
             modelBuilder.Entity("TWYLisans.Domain.Entities.City", b =>
@@ -53,7 +65,19 @@ namespace TWYLisans.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("City");
+                    b.ToTable("Citys");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            cityname = "Ankara"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            cityname = "Bursa"
+                        });
                 });
 
             modelBuilder.Entity("TWYLisans.Domain.Entities.Customer", b =>
@@ -75,6 +99,7 @@ namespace TWYLisans.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<byte[]>("mailaddress")
+                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.Property<string>("phoneNumber")
@@ -88,6 +113,38 @@ namespace TWYLisans.Persistence.Migrations
                     b.HasIndex("townId");
 
                     b.ToTable("Customers");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            active = true,
+                            companyName = "A şirketi",
+                            ePosta = "aaa@aaa.aaa",
+                            mailaddress = new byte[] { 109, 97, 105, 108, 97, 100, 114, 101, 115, 115, 49 },
+                            phoneNumber = "00220202101",
+                            townId = 1
+                        },
+                        new
+                        {
+                            ID = 2,
+                            active = true,
+                            companyName = "B şirketi",
+                            ePosta = "bbb@bbb.bbb",
+                            mailaddress = new byte[] { 109, 97, 105, 108, 97, 100, 114, 101, 115, 115, 50 },
+                            phoneNumber = "22202020202",
+                            townId = 2
+                        },
+                        new
+                        {
+                            ID = 3,
+                            active = true,
+                            companyName = "C şirketi",
+                            ePosta = "ccc@ccc.ccc",
+                            mailaddress = new byte[] { 109, 97, 105, 108, 97, 100, 114, 101, 115, 115, 51 },
+                            phoneNumber = "30303030303",
+                            townId = 3
+                        });
                 });
 
             modelBuilder.Entity("TWYLisans.Domain.Entities.Licence", b =>
@@ -123,6 +180,48 @@ namespace TWYLisans.Persistence.Migrations
                     b.HasIndex("productId");
 
                     b.ToTable("Licences");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            active = true,
+                            creationDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3316),
+                            customerId = 1,
+                            endingDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3328),
+                            licencekey = new Guid("8b6797d6-dddf-4acc-8478-f6078996cb6d"),
+                            productId = 1
+                        },
+                        new
+                        {
+                            ID = 2,
+                            active = true,
+                            creationDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3331),
+                            customerId = 2,
+                            endingDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3332),
+                            licencekey = new Guid("378ccfc5-a090-4fb1-b74d-6dbeb9446ab4"),
+                            productId = 2
+                        },
+                        new
+                        {
+                            ID = 3,
+                            active = true,
+                            creationDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3333),
+                            customerId = 2,
+                            endingDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3334),
+                            licencekey = new Guid("31686c71-dc82-4361-8c2e-ce5a3afe7206"),
+                            productId = 1
+                        },
+                        new
+                        {
+                            ID = 4,
+                            active = true,
+                            creationDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3335),
+                            customerId = 3,
+                            endingDate = new DateTime(2023, 7, 25, 16, 33, 57, 996, DateTimeKind.Local).AddTicks(3335),
+                            licencekey = new Guid("484feabb-6c8c-424c-a2c3-8a3162fce583"),
+                            productId = 2
+                        });
                 });
 
             modelBuilder.Entity("TWYLisans.Domain.Entities.Product", b =>
@@ -151,6 +250,24 @@ namespace TWYLisans.Persistence.Migrations
                     b.HasIndex("categoryId");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            active = true,
+                            categoryId = 1,
+                            productDescription = "A açıklaması",
+                            productName = "A Ürünü"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            active = true,
+                            categoryId = 2,
+                            productDescription = "B açıklaması",
+                            productName = "B Ürünü"
+                        });
                 });
 
             modelBuilder.Entity("TWYLisans.Domain.Entities.Town", b =>
@@ -172,7 +289,27 @@ namespace TWYLisans.Persistence.Migrations
 
                     b.HasIndex("cityId");
 
-                    b.ToTable("Town");
+                    b.ToTable("Towns");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            cityId = 1,
+                            townname = "Çankaya"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            cityId = 1,
+                            townname = "Haymana"
+                        },
+                        new
+                        {
+                            ID = 3,
+                            cityId = 2,
+                            townname = "Nilüfer"
+                        });
                 });
 
             modelBuilder.Entity("TWYLisans.Domain.Entities.Customer", b =>

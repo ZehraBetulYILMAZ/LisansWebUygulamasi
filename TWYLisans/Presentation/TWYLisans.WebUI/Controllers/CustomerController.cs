@@ -123,9 +123,9 @@ namespace TWYLisans.WebUI.Controllers
                 return RedirectToAction("ListCustomers");
             }
             VM_List_Customer mCustomer = (VM_List_Customer)customer;
-            //MemoryStream stream = new MemoryStream(customer.mailaddress);
-            //StreamReader reader = new StreamReader(stream);
-            //mCustomer.mailaddress = reader.ReadToEnd();
+            MemoryStream stream = new MemoryStream(customer.mailaddress);
+            StreamReader reader = new StreamReader(stream);
+            mCustomer.mailaddress = reader.ReadToEnd();
             List<VM_List_Licence> mLicence= new();
             if (customer.licences.Count > 0)
             {
